@@ -1,0 +1,323 @@
+{
+  "distribution": {
+    "total": 1624,
+    "sentiment": {
+      "positive": 1343,
+      "neutral": 123,
+      "negative": 158
+    }
+  },
+  "psychology": {
+    "pains": [
+      {
+        "text": "Problemas con la gestión de reclamaciones por daños en el inmueble",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "Mi experiencia con Inmobiliaria Las Vegas en términos generales fue negativa...",
+        "implication": "Identify and address concerns around property damage claims"
+      },
+      {
+        "text": "Demoras en la atención al cliente",
+        "count": 4,
+        "percentage": 0.2475,
+        "quote": "Es muy largo el tiempo para ser atendido por un asesor",
+        "implication": "Investigate and improve customer service response times"
+      },
+      {
+        "text": "Falta de flexibilidad en los arreglos de pago",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "La respuesta de Arrendamientos Las Vegas Inmobiliaria fue que no hay ninguna posibilidad...",
+        "implication": "Develop flexible payment plans to accommodate changing customer needs"
+      },
+      {
+        "text": "Problemas con el uso del chatbot",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "En la mayoría de los casos aparece un mensaje indicando que todos los asesores se encuentran ocupados...",
+        "implication": "Improve the effectiveness of the chatbot system"
+      },
+      {
+        "text": "Mala atención al cliente",
+        "count": 3,
+        "percentage": 0.1855,
+        "quote": "Muy mal servicio, muy mala atención al cliente.",
+        "implication": "Train staff to provide better customer service"
+      },
+      {
+        "text": "Problemas con la comunicación",
+        "count": 2,
+        "percentage": 0.1235,
+        "quote": "No me dio la información",
+        "implication": "Improve communication channels and ensure that customers receive necessary information"
+      }
+    ],
+    "failedSolutions": [
+      {
+        "text": "Uso de chatbot ineficaz",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "En la mayoría de los casos aparece un mensaje indicando que todos los asesores se encuentran ocupados...",
+        "implication": "Develop alternative solutions for customer support"
+      },
+      {
+        "text": "Falta de flexibilidad en los arreglos de pago",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "La respuesta de Arrendamientos Las Vegas Inmobiliaria fue que no hay ninguna posibilidad...",
+        "implication": "Explore alternative payment options"
+      }
+    ],
+    "emotionalCost": [
+      {
+        "text": "Ansiedad y estrés causados por la falta de atención al cliente",
+        "count": 2,
+        "percentage": 0.1235,
+        "quote": "Es muy largo el tiempo para ser atendido por un asesor",
+        "implication": "Develop strategies to reduce customer anxiety and stress"
+      },
+      {
+        "text": "Sentimiento de frustración y desesperanza",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "Si tienen la oportunidad de tomar un servicio de arrendamiento con estas personas, pierdansela.",
+        "implication": "Improve customer satisfaction and reduce feelings of frustration"
+      }
+    ],
+    "desires": [
+      {
+        "text": "Atención personalizada y rápida",
+        "count": 12,
+        "percentage": 0.7395,
+        "quote": "Excelente atención y acompañamiento por parte de todas las áreas.",
+        "implication": "Develop personalized and efficient customer support"
+      },
+      {
+        "text": "Flexibilidad en los arreglos de pago",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "La respuesta de Arrendamientos Las Vegas Inmobiliaria fue que no hay ninguna posibilidad...",
+        "implication": "Offer flexible payment plans to accommodate changing customer needs"
+      },
+      {
+        "text": "Mejora en la comunicación",
+        "count": 2,
+        "percentage": 0.1235,
+        "quote": "No me dio la información",
+        "implication": "Improve communication channels and ensure that customers receive necessary information"
+      }
+    ],
+    "statusSignals": [
+      {
+        "text": "Excelente servicio y atención al cliente",
+        "count": 13,
+        "percentage": 0.8024,
+        "quote": "Excelente atención y acompañamiento por parte de todas las áreas.",
+        "implication": "Emphasize and build on positive customer experiences"
+      },
+      {
+        "text": "Profesionalismo y trato humano",
+        "count": 2,
+        "percentage": 0.1235,
+        "quote": "Su atención fue impecable, siempre dispuesta a ayudar...",
+        "implication": "Highlight the importance of professionalism and human treatment"
+      }
+    ]
+  },
+  "barriers": {
+    "objections": [
+      {
+        "text": "Falta de confianza en la inmobiliaria",
+        "count": 2,
+        "percentage": 0.1235,
+        "quote": "Si tienen la oportunidad de tomar un servicio de arrendamiento con estas personas, pierdansela.",
+        "implication": "Address concerns around trust and credibility"
+      },
+      {
+        "text": "Pérdida de tiempo y dinero",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "Es muy largo el tiempo para ser atendido por un asesor",
+        "implication": "Highlight the importance of efficient customer support"
+      }
+    ],
+    "trustIssues": [
+      {
+        "text": "Dudas sobre la capacidad de la inmobiliaria para resolver problemas",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "Mi experiencia con Inmobiliaria Las Vegas en términos generales fue negativa...",
+        "implication": "Address concerns around the ability to resolve customer issues"
+      },
+      {
+        "text": "Falta de transparencia y comunicación",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "No me dio la información",
+        "implication": "Improve communication channels and ensure transparency"
+      }
+    ],
+    "priceSkepticism": [
+      {
+        "text": "Preocupaciones sobre el costo del servicio",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "Pero si tienen oportunidad de arrendar con esta inmobiliaria les recomiendo NO HACERLO.",
+        "implication": "Address concerns around pricing and value"
+      }
+    ],
+    "anxietyPatterns": [
+      {
+        "text": "Ansiedad y estrés causados por la falta de atención al cliente",
+        "count": 2,
+        "percentage": 0.1235,
+        "quote": "Es muy largo el tiempo para ser atendido por un asesor",
+        "implication": "Develop strategies to reduce customer anxiety and stress"
+      },
+      {
+        "text": "Sentimiento de frustración y desesperanza",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "Si tienen la oportunidad de tomar un servicio de arrendamiento con estas personas, pierdansela.",
+        "implication": "Improve customer satisfaction and reduce feelings of frustration"
+      }
+    ]
+  },
+  "product": {
+    "featureRequests": [
+      {
+        "text": "Mejora en la comunicación",
+        "count": 2,
+        "percentage": 0.1235,
+        "quote": "No me dio la información",
+        "implication": "Develop and implement new communication channels"
+      },
+      {
+        "text": "Flexibilidad en los arreglos de pago",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "La respuesta de Arrendamientos Las Vegas Inmobiliaria fue que no hay ninguna posibilidad...",
+        "implication": "Offer flexible payment plans to accommodate changing customer needs"
+      }
+    ],
+    "uxComplaints": [
+      {
+        "text": "Problemas con el uso del chatbot",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "En la mayoría de los casos aparece un mensaje indicando que todos los asesores se encuentran ocupados...",
+        "implication": "Improve the effectiveness of the chatbot system"
+      },
+      {
+        "text": "Falta de transparencia y comunicación",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "No me dio la información",
+        "implication": "Improve communication channels and ensure transparency"
+      }
+    ],
+    "unintendedUses": [
+      {
+        "text": "Uso inadecuado del servicio de arrendamiento",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "Si tienen la oportunidad de tomar un servicio de arrendamiento con estas personas, pierdansela.",
+        "implication": "Identify and address unintended uses of the service"
+      }
+    ]
+  },
+  "competitors": {
+    "directComparisons": [
+      {
+        "text": "Comparación directa con otras inmobiliarias",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "Si tienen la oportunidad de tomar un servicio de arrendamiento con estas personas, pierdansela.",
+        "implication": "Conduct market research and compare services with competitors"
+      }
+    ],
+    "switchingTriggers": [
+      {
+        "text": "Cambio a otra inmobiliaria",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "Si tienen la oportunidad de tomar un servicio de arrendamiento con estas personas, pierdansela.",
+        "implication": "Identify and address reasons for customer switching"
+      }
+    ]
+  },
+  "voice": {
+    "repeatedPhrases": [
+      "Excelente atención",
+      "Atención personalizada y rápida"
+    ],
+    "metaphors": [
+      {
+        "text": "La inmobiliaria es un abismo de problemas",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "Mi experiencia con Inmobiliaria Las Vegas en términos generales fue negativa...",
+        "implication": "Use metaphors to convey the complexity of customer issues"
+      }
+    ],
+    "identityStatements": [
+      {
+        "text": "Soy un cliente satisfecho",
+        "count": 13,
+        "percentage": 0.8024,
+        "quote": "Excelente atención y acompañamiento por parte de todas las áreas.",
+        "implication": "Emphasize and build on positive customer experiences"
+      }
+    ]
+  },
+  "actionable": {
+    "opportunities": [
+      {
+        "text": "Mejora en la comunicación",
+        "count": 2,
+        "percentage": 0.1235,
+        "quote": "No me dio la información",
+        "implication": "Develop and implement new communication channels"
+      },
+      {
+        "text": "Flexibilidad en los arreglos de pago",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "La respuesta de Arrendamientos Las Vegas Inmobiliaria fue que no hay ninguna posibilidad...",
+        "implication": "Offer flexible payment plans to accommodate changing customer needs"
+      }
+    ],
+    "messagingAngles": [
+      {
+        "text": "Atención personalizada y rápida",
+        "count": 12,
+        "percentage": 0.7395,
+        "quote": "Excelente atención y acompañamiento por parte de todas las áreas.",
+        "implication": "Emphasize and build on positive customer experiences"
+      },
+      {
+        "text": "Profesionalismo y trato humano",
+        "count": 2,
+        "percentage": 0.1235,
+        "quote": "Su atención fue impecable, siempre dispuesta a ayudar...",
+        "implication": "Highlight the importance of professionalism and human treatment"
+      }
+    ],
+    "objectionsToAddress": [
+      {
+        "text": "Falta de confianza en la inmobiliaria",
+        "count": 2,
+        "percentage": 0.1235,
+        "quote": "Si tienen la oportunidad de tomar un servicio de arrendamiento con estas personas, pierdansela.",
+        "implication": "Address concerns around trust and credibility"
+      },
+      {
+        "text": "Pérdida de tiempo y dinero",
+        "count": 1,
+        "percentage": 0.0615,
+        "quote": "Es muy largo el tiempo para ser atendido por un asesor",
+        "implication": "Highlight the importance of efficient customer support"
+      }
+    ]
+  }
+}
