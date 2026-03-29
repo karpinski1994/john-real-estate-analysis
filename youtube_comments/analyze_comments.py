@@ -15,10 +15,10 @@ import httpx
 # =====================
 # CONFIG
 # =====================
-BASE_DIR   = Path("/Users/karpinski94/projects/google maps scraper")
-INPUT_FILE = BASE_DIR / "all_reviews.json"
-OUTPUT_MD  = BASE_DIR / "analysis_report.md"
-OLLAMA_URL = "http://localhost:11434"
+BASE_DIR   = Path("/Users/karpinski94/projects/google maps scraper/youtube_comments")
+INPUT_FILE = BASE_DIR / "apartamentos-en-venta-medellin.json"
+OUTPUT_MD  = BASE_DIR / "youtube_analysis_report.md"
+OLLAMA_URL = "http://127.0.0.1:11434"
 
 # Preferred model order (best first). Script picks the first one that's installed.
 PREFERRED_MODELS = [
@@ -33,7 +33,7 @@ PREFERRED_MODELS = [
     "gemma2:9b",
 ]
 
-MAX_REVIEWS_PER_BATCH = 50  # keep context manageable
+MAX_REVIEWS_PER_BATCH = 50  # YouTube comments are shorter, can fit more
 
 
 # =====================
@@ -57,14 +57,15 @@ def get_best_model() -> str:
     sys.exit("❌  No Ollama models installed. Run: docker exec ollama ollama pull llama3.1:8b")
 
 
-def reviews_to_text(reviews: list[dict]) -> str:
-    """Flatten reviews to a compact text block for the prompt."""
+def reviews_to_text(videos: list[dict]) -> str:
+    """Flatten nested YouTube comments to a compact text block for the prompt."""
     lines = []
-    for r in reviews:
-        text = (r.get("text") or r.get("reviewText") or r.get("body") or "").strip()
-        rating = r.get("stars") or r.get("rating") or r.get("likert") or ""
-        if text:
-            lines.append(f"[{rating}★] {text}")
+    for v in videos:
+        video_title = v.get("video", {}).get("title", "Unknown Video")
+        for c in v.get("comments", []):
+            text = (c.get("textDisplay") or c.get("textOriginal") or "").strip()
+            if text:
+                lines.append(f"[Video: {video_title}] {text}")
     return "\n".join(lines)
 
 
@@ -102,9 +103,14 @@ def call_ollama(model: str, prompt: str) -> str:
 
 
 def extract_json(raw: str) -> dict:
-    """Pull the first valid JSON object out of the model's response."""
+    """Pull the first valid JSON object out of the model's response and clean common LLM errors."""
     # strip possible markdown fences
     raw = re.sub(r"```(?:json)?", "", raw).strip()
+    
+    # Fix common LLM JSON errors:
+    # 1. remove unquoted percentages like 2.49% -> 2.49
+    raw = re.sub(r"(\"percentage\":\s*)(\d+\.?\d*)%", r"\1\2", raw)
+    
     # find outermost {}
     start = raw.find("{")
     if start == -1:
@@ -127,17 +133,17 @@ def extract_json(raw: str) -> dict:
 
 SYSTEM_PROMPT = """\
 You are a world-class Market Research Analyst, Behavioral Psychologist, and Direct Response Copywriter.
-Your task is to thoroughly analyze the provided Google Maps reviews dataset.
+Your task is to thoroughly analyze the provided YouTube comments dataset.
 Your goal is to produce a comprehensive, deep-dive Voice of Customer (VoC) and behavioral report.
 
 RULES:
 1. Provide at least 7-10 distinct insights per category where data allows.
-2. Quantify EVERY insight: exact count AND percentage of total reviews.
-3. Sort every array in DESCENDING order by percentage.
-4. Go deep on psychology: awareness levels, identity, status, fears, desires, JTBD.
-5. Quotes MUST be exact, word-for-word snippets from the reviews below.
-6. Implications must be sharp, concrete, actionable business/copywriting takeaways.
-7. Do NOT generalise — stay specific. List exact names, price points, phrases.
+2. Quantify EVERY insight: exact count AND percentage of total comments.
+3. PERCENTAGE MUST BE A NUMBER ONLY. DO NOT ADD THE % SYMBOL (e.g., 2.49, not 2.49%).
+4. Sort every array in DESCENDING order by percentage.
+5. Go deep on psychology: awareness levels, identity, status, fears, desires, JTBD.
+6. Quotes MUST be exact, word-for-word snippets from the comments below.
+7. Implications must be sharp, concrete, actionable business/copywriting takeaways.
 8. Output ONLY a valid JSON object. No markdown fences, no intro, no outro.
 
 OUTPUT JSON STRUCTURE:
@@ -185,9 +191,9 @@ OUTPUT JSON STRUCTURE:
 def build_prompt(reviews_text: str, total: int) -> str:
     return f"""{SYSTEM_PROMPT}
 
----REVIEWS (total dataset: {total} reviews, sample shown below)---
+---COMMENTS (total dataset: {total} comments, sample shown below)---
 {reviews_text}
----END OF REVIEWS---
+---END OF COMMENTS---
 
 Now output the JSON analysis:"""
 
@@ -197,14 +203,14 @@ Now output the JSON analysis:"""
 # =====================
 
 def render_md(data: dict) -> str:
-    lines = ["# Voice of Customer (VoC) — Competitor Reviews Analysis\n"]
+    lines = ["# Voice of Customer (VoC) — YouTube Comments Analysis\n"]
 
     # Distribution
     dist = data.get("distribution", {})
     sent = dist.get("sentiment", {})
     lines += [
         "## 📊 Distribution",
-        f"- **Total reviews analysed:** {dist.get('total', 'N/A')}",
+        f"- **Total comments analysed:** {dist.get('total', 'N/A')}",
         f"- 🟢 Positive: {sent.get('positive', 'N/A')}",
         f"- 🟡 Neutral: {sent.get('neutral', 'N/A')}",
         f"- 🔴 Negative: {sent.get('negative', 'N/A')}",
@@ -303,25 +309,37 @@ def render_md(data: dict) -> str:
 # =====================
 
 def main():
-    print("=== VoC Analyzer ===\n")
+    print("=== VoC Analyzer (YouTube) ===\n")
 
-    # 1. Load reviews
+    # 1. Load data
     print(f"Loading {INPUT_FILE} …")
     with open(INPUT_FILE, encoding="utf-8") as f:
-        reviews: list[dict] = json.load(f)
-    total = len(reviews)
-    print(f"  {total} reviews loaded")
+        videos: list[dict] = json.load(f)
+    
+    # Count total comments for accurate stats
+    total_comments = sum(len(v.get("comments", [])) for v in videos)
+    print(f"  {len(videos)} videos with total {total_comments} comments loaded")
 
     # 2. Pick model
     model = get_best_model()
 
-    # 3. Build review text (sample if huge)
-    sample = reviews[:MAX_REVIEWS_PER_BATCH]
-    reviews_text = reviews_to_text(sample)
-    print(f"  Using {len(sample)} reviews for analysis prompt")
+    # 3. Build text (limit videos if too many, currently 100 max comments)
+    # We take comments until we reach roughly MAX_REVIEWS_PER_BATCH
+    sample_videos = []
+    current_count = 0
+    for v in videos:
+        count = len(v.get("comments", []))
+        if count == 0: continue
+        sample_videos.append(v)
+        current_count += count
+        if current_count >= MAX_REVIEWS_PER_BATCH:
+            break
+
+    reviews_text = reviews_to_text(sample_videos)
+    print(f"  Using {current_count} comments for analysis prompt")
 
     # 4. Call LLM
-    prompt = build_prompt(reviews_text, total)
+    prompt = build_prompt(reviews_text, total_comments)
     raw_response = call_ollama(model, prompt)
 
     # 5. Parse JSON
@@ -330,14 +348,14 @@ def main():
         analysis = extract_json(raw_response)
     except Exception as e:
         # Save raw for debugging
-        raw_path = BASE_DIR / "analysis_raw_response.txt"
+        raw_path = BASE_DIR / "analysis_raw_response_yt.txt"
         raw_path.write_text(raw_response, encoding="utf-8")
         print(f"  ⚠️  JSON parse failed: {e}")
         print(f"  Raw response saved to {raw_path}")
         sys.exit(1)
 
     # 6. Save raw JSON too
-    json_path = BASE_DIR / "analysis_result.json"
+    json_path = BASE_DIR / "youtube_analysis_result.json"
     json_path.write_text(json.dumps(analysis, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"  Raw JSON saved → {json_path}")
 
@@ -349,3 +367,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

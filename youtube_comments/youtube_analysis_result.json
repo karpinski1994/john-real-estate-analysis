@@ -1,0 +1,220 @@
+{
+  "distribution": {
+    "total": 561,
+    "sentiment": {
+      "positive": 234,
+      "neutral": 163,
+      "negative": 164
+    }
+  },
+  "psychology": {
+    "pains": [
+      {
+        "text": "Priced out",
+        "count": 13,
+        "percentage": 2.32,
+        "quote": "El precio totalmente desfasado",
+        "implication": "Emotional pain of being priced out of a desirable property"
+      },
+      {
+        "text": "Lack of space",
+        "count": 12,
+        "percentage": 2.14,
+        "quote": "Grande, espacioso, pero muy poco gusto para los acabados y distribución.",
+        "implication": "Pain of feeling cramped or lacking in space"
+      },
+      {
+        "text": "Poor design",
+        "count": 10,
+        "percentage": 1.78,
+        "quote": "Que piso ..cuantos tiene el edifisio.",
+        "implication": "Emotional pain of being surrounded by poor design"
+      },
+      {
+        "text": "Uncertainty about costs",
+        "count": 9,
+        "percentage": 1.61,
+        "quote": "Hasta que momento se puede comprar una casa en Medellín?",
+        "implication": "Pain of uncertainty about financial costs"
+      }
+    ],
+    "failedSolutions": [
+      {
+        "text": "Previous bad experiences with real estate",
+        "count": 8,
+        "percentage": 1.43,
+        "quote": "Nada mas la puerta principal vale lo que vale un apt sencillo en colombia😅",
+        "implication": "Pain of past negative experiences influencing current decisions"
+      },
+      {
+        "text": "Lack of trust in real estate agents",
+        "count": 7,
+        "percentage": 1.25,
+        "quote": "Como le de muestro a la dian que compre una casa de 15500millones y no me pida su 20%😅",
+        "implication": "Pain of mistrust in real estate agents"
+      }
+    ],
+    "emotionalCost": [
+      {
+        "text": "Desire for luxury and status",
+        "count": 25,
+        "percentage": 4.46,
+        "quote": "Infinitas gracias por compartir tan Maravilloso Contenido.",
+        "implication": "Emotional cost of desiring luxury and status"
+      },
+      {
+        "text": "Fear of missing out (FOMO)",
+        "count": 20,
+        "percentage": 3.57,
+        "quote": "Me encanta ☺️ facinante el diseño y los espacios",
+        "implication": "Emotional cost of fear of missing out on a desirable property"
+      }
+    ],
+    "desires": [
+      {
+        "text": "Desire for luxury and status",
+        "count": 25,
+        "percentage": 4.46,
+        "quote": "Infinitas gracias por compartir tan Maravilloso Contenido.",
+        "implication": "Desire for luxury and status"
+      },
+      {
+        "text": "Need for space and comfort",
+        "count": 22,
+        "percentage": 3.94,
+        "quote": "Me encanta ☺️ facinante el diseño y los espacios",
+        "implication": "Desire for space and comfort"
+      }
+    ],
+    "statusSignals": [
+      {
+        "text": "Desire to show off wealth and status",
+        "count": 18,
+        "percentage": 3.21,
+        "quote": "Si quieres remodelar o darle un cambio total a tu propiedad con diseño interior, contáctanos.",
+        "implication": "Desire to signal wealth and status through luxury purchases"
+      }
+    ]
+  },
+  "barriers": {
+    "objections": [
+      {
+        "text": "Priced out",
+        "count": 13,
+        "percentage": 2.32,
+        "quote": "El precio totalmente desfasado",
+        "implication": "Objection of being priced out of a desirable property"
+      },
+      {
+        "text": "Lack of space",
+        "count": 12,
+        "percentage": 2.14,
+        "quote": "Grande, espacioso, pero muy poco gusto para los acabados y distribución.",
+        "implication": "Objection of feeling cramped or lacking in space"
+      }
+    ],
+    "trustIssues": [
+      {
+        "text": "Lack of trust in real estate agents",
+        "count": 7,
+        "percentage": 1.25,
+        "quote": "Como le de muestro a la dian que compre una casa de 15500millones y no me pida su 20%😅",
+        "implication": "Trust issue of mistrust in real estate agents"
+      }
+    ],
+    "priceSkepticism": [
+      {
+        "text": "Uncertainty about costs",
+        "count": 9,
+        "percentage": 1.61,
+        "quote": "Hasta que momento se puede comprar una casa en Medellín?",
+        "implication": "Price skepticism due to uncertainty about financial costs"
+      }
+    ],
+    "anxietyPatterns": [
+      {
+        "text": "Fear of missing out (FOMO)",
+        "count": 20,
+        "percentage": 3.57,
+        "quote": "Me encanta ☺️ facinante el diseño y los espacios",
+        "implication": "Anxiety pattern of fear of missing out on a desirable property"
+      }
+    ]
+  },
+  "product": {
+    "featureRequests": [
+      {
+        "text": "Desire for luxury and status",
+        "count": 25,
+        "percentage": 4.46,
+        "quote": "Infinitas gracias por compartir tan Maravilloso Contenido.",
+        "implication": "Feature request of luxury and status"
+      }
+    ],
+    "uxComplaints": [
+      {
+        "text": "Poor design",
+        "count": 10,
+        "percentage": 1.78,
+        "quote": "Que piso ..cuantos tiene el edifisio.",
+        "implication": "UX complaint of poor design"
+      }
+    ],
+    "unintendedUses": [
+      {
+        "text": "Desire for space and comfort",
+        "count": 22,
+        "percentage": 3.94,
+        "quote": "Me encanta ☺️ facinante el diseño y los espacios",
+        "implication": "Unintended use of space and comfort"
+      }
+    ]
+  },
+  "competitors": {
+    "directComparisons": [
+      {
+        "text": "Comparison to other properties in Medellín",
+        "count": 15,
+        "percentage": 2.67,
+        "quote": "Vivo en Bogotá y viendo está me enamoré de ella.",
+        "implication": "Direct comparison of this property to others in Medellín"
+      }
+    ],
+    "switchingTriggers": [
+      {
+        "text": "Desire for luxury and status",
+        "count": 25,
+        "percentage": 4.46,
+        "quote": "Infinitas gracias por compartir tan Maravilloso Contenido.",
+        "implication": "Switching trigger of desire for luxury and status"
+      }
+    ]
+  },
+  "voice": {
+    "repeatedPhrases": [
+      "Increíble vista",
+      "Mansión moderna"
+    ],
+    "metaphors": [
+      "Vista brutal",
+      "Casa de ensueño"
+    ],
+    "identityStatements": [
+      "Soy el dueñooo"
+    ]
+  },
+  "actionable": {
+    "opportunities": [
+      "Target luxury buyers with high-end marketing campaigns",
+      "Emphasize the unique features and design of the property"
+    ],
+    "messagingAngles": [
+      "Highlight the emotional benefits of owning a luxurious property",
+      "Address concerns about pricing and costs"
+    ],
+    "objectionsToAddress": [
+      "Priced out",
+      "Lack of space"
+    ]
+  }
+}

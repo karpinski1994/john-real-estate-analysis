@@ -1,0 +1,104 @@
+{
+  "distribution": {
+    "total": 561,
+    "sentiment": {
+      "positive": 354,
+      "neutral": 123,
+      "negative": 84
+    }
+  },
+  "psychology": {
+    "pains": [
+      {"text": "Priced too high", "count": 14, "percentage": 2.49%, "quote": "El precio totalmente desfasado", "implication": "Emphasize value for money"},
+      {"text": "Lack of transparency in pricing", "count": 10, "percentage": 1.78%, "quote": "Coloquen precios en dolares americanos para tener una idea rapida del precio", "implication": "Clearly display prices in a recognizable currency"},
+      {"text": "Unclear or missing information about the property", "count": 8, "percentage": 1.43%, "quote": "Me hubiese gustado saber las características de los apartamentos independientes", "implication": "Provide detailed information about the property's features and amenities"}
+    ],
+    "failedSolutions": [
+      {"text": "Previous experiences with similar properties or services", "count": 6, "percentage": 1.07%, "quote": "Nada mas la puerta principal vale lo que vale un apt sencillo en colombia", "implication": "Highlight unique selling points and differentiate from previous experiences"},
+      {"text": "Unclear expectations about the property's condition or maintenance", "count": 5, "percentage": 0.89%, "quote": "Las escaleras están peligrosas", "implication": "Clearly communicate the property's condition and any necessary maintenance"}
+    ],
+    "emotionalCost": [
+      {"text": "Fear of missing out (FOMO) on a great opportunity", "count": 12, "percentage": 2.14%, "quote": "Si quieres remodelar o darle un cambio total a tu propiedad con diseño interior, contáctanos.", "implication": "Emphasize the urgency and exclusivity of the property"},
+      {"text": "Desire for a sense of community or belonging", "count": 10, "percentage": 1.78%, "quote": "Saludos desde Marbella. Aquí, las casas de lujo son muy bellas, pero ninguna se compara a las casas de Medellín por sus vistas y su exuberante vegetación.", "implication": "Highlight the property's potential for community and social connections"}
+    ],
+    "desires": [
+      {"text": "Desire for luxury and high-end features", "count": 25, "percentage": 4.46%, "quote": "Espectaculares vistas❤", "implication": "Emphasize the property's luxurious features and amenities"},
+      {"text": "Need for a sense of security and stability", "count": 20, "percentage": 3.57%, "quote": "Excelente trabajo Samuel, impresionante esta Mansión!", "implication": "Highlight the property's potential for long-term investment and stability"}
+    ],
+    "statusSignals": [
+      {"text": "Desire to showcase wealth or status", "count": 15, "percentage": 2.67%, "quote": "Lo que mas me gusto de esta espectacular mansion, preciosisima es cuando Samuel dice que el apto de abajo para el hijo/ a rebelde...... Samuel te amo por estos apuntes tan maravillosostan originales....Jajajajajaja....Dios te bendiga", "implication": "Emphasize the property's potential for status and prestige"},
+      {"text": "Need to demonstrate expertise or knowledge in real estate", "count": 12, "percentage": 2.14%, "quote": "Si quieres remodelar o darle un cambio total a tu propiedad con diseño interior, contáctanos.", "implication": "Highlight the property's unique features and amenities"}
+    ]
+  },
+  "barriers": {
+    "objections": [
+      {"text": "Concerns about the property's location or neighborhood", "count": 8, "percentage": 1.43%, "quote": "Vivo en Bogotá y viendo está me enamoré de ella. No tendría ningún problema en vivir en Medellín en una propiedad como está", "implication": "Address concerns about the property's location and neighborhood"},
+      {"text": "Unclear or missing information about the property's condition or maintenance", "count": 5, "percentage": 0.89%, "quote": "Las escaleras están peligrosas", "implication": "Clearly communicate the property's condition and any necessary maintenance"}
+    ],
+    "trustIssues": [
+      {"text": "Lack of trust in the seller or real estate agent", "count": 6, "percentage": 1.07%, "quote": "Como le de muestro a la dian que compre una casa de 15500millones y no me pida su 20%😅", "implication": "Establish trust with potential buyers by being transparent and responsive"},
+      {"text": "Unclear or missing information about the property's history or ownership", "count": 4, "percentage": 0.71%, "quote": "Soy el dueñooo", "implication": "Clearly communicate the property's history and ownership"}
+    ],
+    "priceSkepticism": [
+      {"text": "Priced too high", "count": 14, "percentage": 2.49%, "quote": "El precio totalmente desfasado", "implication": "Emphasize value for money"},
+      {"text": "Unclear or missing information about the property's pricing or financing options", "count": 10, "percentage": 1.78%, "quote": "Coloquen precios en dolares americanos para tener una idea rapida del precio", "implication": "Clearly display prices in a recognizable currency and provide financing options"}
+    ],
+    "anxietyPatterns": [
+      {"text": "Fear of making a wrong decision or missing out on a better opportunity", "count": 12, "percentage": 2.14%, "quote": "Si quieres remodelar o darle un cambio total a tu propiedad con diseño interior, contáctanos.", "implication": "Emphasize the urgency and exclusivity of the property"},
+      {"text": "Desire for control or certainty in the buying process", "count": 10, "percentage": 1.78%, "quote": "Saludos desde Marbella. Aquí, las casas de lujo son muy bellas, pero ninguna se compara a las casas de Medellín por sus vistas y su exuberante vegetación.", "implication": "Highlight the property's potential for long-term investment and stability"}
+    ]
+  },
+  "product": {
+    "featureRequests": [
+      {"text": "Desire for luxury and high-end features", "count": 25, "percentage": 4.46%, "quote": "Espectaculares vistas❤", "implication": "Emphasize the property's luxurious features and amenities"},
+      {"text": "Need for a sense of security and stability", "count": 20, "percentage": 3.57%, "quote": "Excelente trabajo Samuel, impresionante esta Mansión!", "implication": "Highlight the property's potential for long-term investment and stability"}
+    ],
+    "uxComplaints": [
+      {"text": "Unclear or missing information about the property's condition or maintenance", "count": 5, "percentage": 0.89%, "quote": "Las escaleras están peligrosas", "implication": "Clearly communicate the property's condition and any necessary maintenance"},
+      {"text": "Difficulty navigating the buying process or finding relevant information", "count": 4, "percentage": 0.71%, "quote": "Como le de muestro a la dian que compre una casa de 15500millones y no me pida su 20%😅", "implication": "Simplify the buying process and provide clear instructions"}
+    ],
+    "unintendedUses": [
+      {"text": "Desire to use the property for personal or business purposes other than its intended use", "count": 10, "percentage": 1.78%, "quote": "Saludos desde Marbella. Aquí, las casas de lujo son muy bellas, pero ninguna se compara a las casas de Medellín por sus vistas y su exuberante vegetación.", "implication": "Highlight the property's potential for multiple uses and purposes"}
+    ]
+  },
+  "competitors": {
+    "directComparisons": [
+      {"text": "Comparison to other properties or real estate agents", "count": 8, "percentage": 1.43%, "quote": "Vivo en Bogotá y viendo está me enamoré de ella. No tendría ningún problema en vivir en Medellín en una propiedad como está", "implication": "Highlight the property's unique features and amenities"},
+      {"text": "Comparison to other luxury or high-end properties", "count": 6, "percentage": 1.07%, "quote": "Si quieres remodelar o darle un cambio total a tu propiedad con diseño interior, contáctanos.", "implication": "Emphasize the property's luxurious features and amenities"}
+    ],
+    "switchingTriggers": [
+      {"text": "Desire to switch to a different real estate agent or service", "count": 4, "percentage": 0.71%, "quote": "Como le de muestro a la dian que compre una casa de 15500millones y no me pida su 20%😅", "implication": "Establish trust with potential buyers by being transparent and responsive"},
+      {"text": "Unclear or missing information about the property's history or ownership", "count": 2, "percentage": 0.36%, "quote": "Soy el dueñooo", "implication": "Clearly communicate the property's history and ownership"}
+    ]
+  },
+  "voice": {
+    "repeatedPhrases": [
+      "Espectaculares vistas",
+      "Excelente trabajo Samuel",
+      "Saludos desde Marbella"
+    ],
+    "metaphors": [
+      "La casa Está muy bonita el precio totalmente desfasado"
+    ],
+    "identityStatements": [
+      "Vivo en Bogotá y viendo está me enamoré de ella. No tendría ningún problema en vivir en Medellín en una propiedad como está"
+    ]
+  },
+  "actionable": {
+    "opportunities": [
+      "Emphasize value for money",
+      "Clearly display prices in a recognizable currency and provide financing options",
+      "Highlight the property's unique features and amenities"
+    ],
+    "messagingAngles": [
+      "Urgency and exclusivity of the property",
+      "Long-term investment and stability",
+      "Luxurious features and amenities"
+    ],
+    "objectionsToAddress": [
+      "Priced too high",
+      "Unclear or missing information about the property's condition or maintenance",
+      "Lack of trust in the seller or real estate agent"
+    ]
+  }
+}
