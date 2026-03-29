@@ -1,278 +1,249 @@
-# 🧠 ADVANCED 360° MARKET INTELLIGENCE REPORT
-This report is generated dynamically from 1,500+ real-world VoC data points using an Elite RAG engine.
+# 📊 MARKET ANALYSIS REPORT
 
+**Total Comments Analyzed**: 1496
 
+## 🔴 PAINS & FRUSTRATIONS (NEGATIVE SIGNALS)
 
-# PAINS
-
-# 📊 MARKET INTELLIGENCE REPORT
-
-## 🎯 CORE PATTERN: PAIN / FRICTION
-The dominant market sentiment is highly negative, primarily due to poor customer service experiences. Over 50% of the feedback focuses on issues like slow response times, inadequate support during maintenance requests, and overall dissatisfaction with services provided.
-
-## 💡 KEY BEHAVIORAL INSIGHTS
-- Insight Statement: The pain points are predominantly around communication and responsiveness, with a frequency density of 40%.
-- REAL QUOTE Evidence:
-    - "se tardan demasiado en responder las solicitudes de mantenimiento pasan semanas sin que me den respuestas de mensajes por la línea de whatsapp y cuando marco a la línea telefónica en muchas ocasiones está ocupada y debo de esperar hasta 20 minutos en línea para que me atiendan"
-    - "se tardan demasiado en responder las solicitudes de mantenimiento pasan semanas sin que me den respuestas"
-
-- Insight Statement: Customers also experience significant issues with the quality of services and follow-ups, with a frequency density of 30%.
-- REAL QUOTE Evidence:
-    - "pésimo servicio no validad sus procesos no tiene la seguridad pertinente para garantizar que las personas que firman sean las reales aparentemente cualquier persona firma y no validan la identidad"
-    - "la atención de esta empresa es terrible no responden las solicitudes de los clientes y manejan mal la información para confundir a sus clientes"
-
-## 📈 STRATEGIC IMPLICATIONS & ACTION PLAN
-The brand should immediately focus on enhancing customer service and response times. Implementing a robust communication strategy, including regular updates on maintenance requests and other services, can significantly improve client satisfaction. Additionally, the company should ensure rigorous verification processes for services like signatures to prevent legal issues.
-
-## 🚥 DATA CONFIDENCE: HIGH
-Justification: The high frequency of complaints (5 out of 10 unique insights) regarding customer service and responsiveness, along with specific quotes that highlight these pain points, ensures a robust data foundation. This level of insight density indicates a consistent issue that needs addressing.
+### High Prices (2.4% [36/1496])
+- "que precio"
+- "precioso"
+- "que precio tiene"
+- "precio"
+- "aun esta disponible y que precio tiene"
 
 ---
 
-
-# DESIRES
-
-# 📊 MARKET INTELLIGENCE REPORT
-
-## 🎯 CORE PATTERN: DESIRE / MOTIVATION
-The dominant market sentiment is overwhelmingly positive, with clients expressing strong desires for excellent service, reliability, and professional support. This is evident from the high frequency of quotes emphasizing quality service, commitment to customer needs, and overall satisfaction.
-
-## 💡 KEY BEHAVIORAL INSIGHTS
-- **Insight Statement:** The desire for exceptional service and professionalism among clients appears with a 100% insight density.
-- **REAL QUOTE Evidence:**
-    - "i had a great experience and want to highlight the excellent service i received from edwin barandica he was extremely professional attentive and knowledgeable"
-    - "excelente serviciouna asesora muy especial felicitaciones por tan importante negocio el servicio fue muy eficiente y en tan poco tiempo lo recomiendo"
-
-## 📈 STRATEGIC IMPLICATIONS & ACTION PLAN
-- **Exploit Opportunity:** The brand should continue to focus on enhancing customer service, ensuring that all interactions are professional and attentive. Highlighting these strengths in marketing materials and client testimonials can further solidify the company’s reputation for excellence.
-- **Mitigate Risk:** Given the strong correlation between positive experiences and repeat business, it is crucial to maintain high standards of service across all departments, including customer support and follow-up. Any areas of concern, such as slow responses or unmet expectations, should be addressed promptly.
-
-## 🚥 DATA CONFIDENCE: HIGH
-- **Justification:** The data points are consistent with a strong positive sentiment, repeated multiple times in various contexts. The high frequency of positive quotes (10 mentions) and the absence of significant outliers support this confidence level.
+### Bad Service (0.4% [6/1496])
+- "i would recommend that any foreigner avoid this business  i can provide details about my experience where urban raiz represented the sale of an apartment that had extreme water leakage problems and that the previous owner confiscated the common area of the apartment roof to be part of his exclusive use terrace   please send me a private message an urban raiz agent was actively involved in the failed repair attempt resulting in over 30k usd of repairs at my expense since the other agent jakeline is no longer part of urban raiz the current agent has chosen not to remember what his partner was doing or what problems existed with the apartment i bought  however i have proof from whatsapp to show who knew what and when they knew it    please do not trust the fancy videos or good production"
+- "bad customer service three visits 5 texts and they still have contacted me with any apartment listings"
+- "never never wont recommend this company i been waiting for more the one month to publish my property and everyday is something new horrible service and communication"
+- "do not rent from them i rented from this agency back in 20172019 super unprofessional it looks like they deleted the previous reviews they had about 20 people had gave them 1 star review its easy to delete the business account on google and restart another one it looks like they are still getting 1 star reviews im putting my 1 star back on their listing  they provided really bad service they also stole about 1 million from me in my cdt i didnt get my cdt till 1 year later they would come up with any excuse to get you to stay in the apartment and make you miss your move out date by pointing out bad stuff in the apartment that was there prior to move in i guess its a trick of theirs to get you the person to pay for additional rent for the days they wont sign it over  be extremely careful with these people and do not give cdt"
+- "the worst customer service all employees lying all the time never answer the phone they work with the money of us extended the time in delivery and process of title they like customer feel miserables begging for attention at the end of my purchase because the lender denied my loan i have to pay cash i gave to them tu full amount on purchase price in september 2024 and do not want to give me mi title documents they use my money until march or april 2024 6 months later and dont care nothing investors alert first time home buyers alert they do not give promise of purchase and they play like marionets with buyers be carefull watch this predators its august 2025 a year later working with my money and still do not have title"
 
 ---
 
-
-# OBJECTIONS
-
-# 📊 MARKET INTELLIGENCE REPORT
-
-## 🎯 CORE PATTERN: PAIN / FRICTION
-The dominant market sentiment is largely negative, with significant pain points related to customer service and communication issues. Only a few positive experiences are mentioned, overshadowed by numerous complaints about delays, poor support, and unmet expectations.
-
-## 💡 KEY BEHAVIORAL INSIGHTS
-- **Insight Statement (Highlight the % frequency/density derived from counts):** The negative sentiment is strongly indicated by repeated patterns of customer dissatisfaction. Phrases such as "terrible customer service," "very careful with this company," and "never recommend" are cited 8 times, making up 40% of the total pain points.
-- **REAL QUOTE Evidence:**
-    - "never never wont recommend this company i been waiting for more the one month to publish my property and everyday is something new"
-    - "pésimo servicio no validad sus procesos no tiene la seguridad pertinente para garantizar que las personas que firman sean las reales aparentemente cualquier persona firma y no validan la identidad los demande ante la fiscalía por falsedad personal"
-
-## 📈 STRATEGIC IMPLICATIONS & ACTION PLAN
-- **Mitigation of Negative Experiences:** The company must urgently address customer service and communication issues to reduce negative sentiment. Implementing a robust customer feedback system and ensuring quick response times can significantly improve the customer experience.
-- **Customer Support Training:** Invest in comprehensive training for staff to ensure they are equipped with effective communication skills and problem-solving abilities, especially regarding post-purchase support.
-- **Process Improvements:** Review and streamline internal processes related to document verification and client management to prevent fraudulent incidents that have caused legal issues. Enhance transparency by providing clear documentation and follow-up on complaints.
-
-## 🚥 DATA CONFIDENCE: HIGH
-The data confidence is high, as the insights are derived from a consistent pattern of 8 out of 10 quotes expressing dissatisfaction, which constitutes 40% of the total pain points mentioned in the dataset. This repeat frequency underscores the depth and breadth of the negative experiences faced by customers.
+### No Phone Number (0.4% [6/1496])
+- "hola numero de tel para mas informacion porfa"
+- "por favor un número de teléfono  para conunicarse"
+- "no veo el número de telefono"
+- "por favor manda número para llamar"
+- "me ha ido bien pero se me borró su numero y ahora los numeros que están en internet no funcionan y necesito comunicarme con ellos ya si por favor leen esto me pueden comentar en la respuesta cual es el numero de wpp con el que están atendiendo gracias"
 
 ---
 
-
-# TRUST
-
-# 📊 MARKET INTELLIGENCE REPORT
-
-## 🎯 CORE PATTERN: OBJECTION / BARRIER
-The dominant market sentiment highlights a clear positive perception of "Premium Properties" with high satisfaction rates. However, there is also a significant objection raised by one client regarding the service quality and reliability, indicating potential risks in customer trust.
-
-## 💡 KEY BEHAVIORAL INSIGHTS
-- **Insight Statement (80% frequency):** Clients highly recommend "Premium Properties," citing their professionalism, knowledge, and excellent service.
-  - **REAL QUOTE Evidence:** 
-    ```
-    great  company  they helped me buy a property in medellin and are managing it for me  they upload the bills and everything is verified  diana has done very well in managing the property  trustworthy and transparent
-    ```
-
-- **Insight Statement (10% frequency):** One client expresses dissatisfaction with "Premium Properties," citing issues like delivery problems and lack of communication.
-  - **REAL QUOTE Evidence:** 
-    ```
-    compre un apartamento desde el exterior del país con bienesbienes  el apartamento me lo entregaron con muchos problemas y ahora nadie contesta en la sala de ventas que debo hacer hay alguien en esta empresa que responda
-    i bought an apartment from outside the country with bienes  bienes the apartment was delivered to me with many issues  and now no one answers in the sales room is there someone in this company who help us
-    ```
-
-## 📈 STRATEGIC IMPLICATIONS & ACTION PLAN
-### Exploiting Positive Sentiment:
-- **Increase Marketing Focus:** Emphasize the positive experiences shared by clients through testimonials, case studies, and social media campaigns. Highlight the comprehensive service offered, including property management.
-  
-- **Customer Retention Programs:** Develop loyalty programs that reward repeat customers and provide additional support to maintain high levels of satisfaction.
-
-### Mitigating Negative Sentiment:
-- **Quality Assurance Measures:** Implement robust quality assurance processes to ensure timely and accurate delivery of properties. Address client feedback on communication issues, possibly by establishing a dedicated customer service team.
-  
-- **Customer Feedback Mechanisms:** Encourage clients to provide ongoing feedback through surveys or direct communication channels, allowing for continuous improvement.
-
-## 🚥 DATA CONFIDENCE: HIGH
-The high density of positive quotes (9/10) and the significant weightage given to repeated insights ensure a strong data foundation. The single negative quote is notable but less frequent, supporting the overall positive sentiment towards "Premium Properties."
+### Bad Real Estate Experience (0.3% [4/1496])
+- "son la inmobiliaria más deshonesta  no tomen ningún inmueble con ellos  me está generando el cobro de un valor diferente a lo que informó la asesora  adicional se niegan recibir las llaves cuando las fotos del inventario inicial no es el mismo de que ellos están pidiendo para recibir el apto"
+- "contacté a esta inmobiliaria por un inmueble si bien la atención es buena al verificar las fotos del inmueble era evidente el intento de mejoramiento digital para disimular las imperfecciones no está bien"
+- "mucho cuidado con esta inmobiliaria  falsificaron el inventario de entrega de una casa que alquilamos con ellos escribieron cosas después de la firma  siempre sacar una foto del inventario como lo hicimos con la prueba de la foto vamos a hacer una denuncia ante la justicia"
+- "si te quieres ahorrar un dolor de cabeza busca con otra inmobiliaria son de lo peor y si no tienes de otra cuando recibas el apto tómale foto a todo porque cuando te hacen inventario lo hacen por encima y cuando vas a entregar te cobran todo sabiendo que así te lo entregaron  son muy muy ratas y abusivos ojo con ellos  busquen con otra inmobiliaria"
 
 ---
 
-
-# PRICE
-
-# 📊 MARKET INTELLIGENCE REPORT
-
-## 🎯 CORE PATTERN: DESIRE / MOTIVATION
-The dominant market sentiment is overwhelmingly positive, with clients expressing strong desire for professional and trustworthy property services. This is reflected in the high frequency of quotes praising the company's reliability and service quality.
-
-## 💡 KEY BEHAVIORAL INSIGHTS
-- **Insight Statement**: The "great  company  they helped me buy a pro..." (100% insight density) is indicative of the strong desire for reliable property services. Clients are motivated by trust, transparency, and excellent after-sales support.
-- **REAL QUOTE Evidence**:
-    - "great  company  they helped me buy a property in medellin and are managing it for me  they upload the bills and everything is verified  diana has done very well in managing the property  trustworthy and transparent"
-
-## 📈 STRATEGIC IMPLICATIONS & ACTION PLAN
-- **Exploit This Opportunity**: The brand should continue to emphasize its commitment to trust, transparency, and exceptional customer service. Highlight testimonials on their website and marketing materials to reinforce these values.
-- **Mitigate Risk**: Address negative feedback by implementing a robust customer support system and ensuring clear communication in contracts to avoid future disputes.
-
-## 🚥 DATA CONFIDENCE: HIGH
-**Justification**: The high frequency of positive quotes (100% insight density) indicates a strong, consistent market sentiment. Additionally, the presence of direct testimonials from satisfied customers provides substantial evidence for these insights. While there are some negative comments, their low frequency and lack of repeated patterns suggest they do not significantly impact the overall desire/motivation analysis.
+### Poor Service (0.3% [4/1496])
+- "en mi estadía en medellín jamás encontré agencia tan descuidada a los detalles y desatenta para sus futuros clientes para que hacer perder el tiempo de las personas solicitando documentos e ir presencialmente a su sede cuando pueden ser rechazados por razones totalmente arbitrarias y sin motivo alguno un día te muestran un apartamento y te llenan de ilusiones pero al día siguiente te encaran burocracia apuros y te hacen perder el tiempo para que al final sea un rechazo simplemente porque el dueño no quiso estoy muy seguro que el rechazo por parte de ustedes o de el dueño tiene un motivo muy desagradable que por respeto a mi mismo no escribiré pero que estén atentos todos los que lean este comentario  no pierdan el tiempo con esta gente"
+- "la mas mala agencia que me he topado en la propiedad que tenía arrandada se me taparon los desagües y lo reporte el 12 de febrero del 2024 y 20 días después no habían enviado a nadie para la reparación yo lo mandé a reparar y tuve que colocar un derecho de petición para entregar el inmueble por la falta de gestión de esta gente y ni siquiera fueron capaz de cubrir el monto que pague por la reparación muy malos no los recomiendo evitesen problemas"
+- "me ha ido bien con la agencia tiene aspectos por mejorar pero siempre están muy dispuestos a hacer seguimiento de las peticiones estoy con ellos desde hace más de 2 años y me ayudaron con todo el tema de cambio de propiedad en el plazo que necesitaba y con muy buen soporte antes durante y después del proceso de firma de contrato me siento muy acompañada en cada uno de los eventos que se presentan con las propiedades que he rentado a través de ellos"
+- "mucho cuidado con ésta agencia no reparan los daños en las propiedades sin autorización de los dueños del inmueble  me dejaron 2 años sin un baño y me tocó pelearlo legalmente adicionalmente la entrega es un complique solo les importa cobrar días y días  así la propiedad esté desocupado"
 
 ---
 
-
-# FEATURES
-
-# 📊 MARKET INTELLIGENCE REPORT
-
-## 🎯 CORE PATTERN: GENERAL MARKET OVERVIEW
-The market sentiment towards premium propiedades is overwhelmingly positive, with clients praising their exceptional service, professional management, and expertise in the Medellín real estate market. This is evident from multiple testimonials highlighting their reliability and client satisfaction.
-
-## 💡 KEY BEHAVIORAL INSIGHTS
-- **Insight Statement:** The term "excellent service" is cited 8 times out of a total of 15 mentions.
-- **REAL QUOTE Evidence:**
-    - "excellent service from premium propiedades the management of my properties has been professional, efficient and very transparent."
-    - "what am amazing service provided
-very friendly approachable responding quick and give good recommendations they helped me to buy an apartment in medellin i am very happy with the way things went so i do not understand why there are negative reactions for me only positive experiences"
-
-## 📈 STRATEGIC IMPLICATIONS & ACTION PLAN
-- **Exploit this Opportunity:** Premium propiedades should leverage their strong reputation by continuing to emphasize their service quality in marketing materials and client communications. They can create a customer referral program or develop case studies featuring the testimonials provided, which would serve as social proof for potential clients.
-- **Mitigate Risks:** Despite the overwhelming positive feedback, there are two negative comments suggesting delays in property listing. It is critical to address these issues proactively by implementing better communication protocols and streamlining their internal processes to ensure timely updates.
-
-## 🚥 DATA CONFIDENCE: HIGH
-- **Justification:** The high confidence level is supported by the significant frequency of positive insights (12 out of 15 quotes) with specific, repeated mentions like "excellent service" and positive experiences shared multiple times. This indicates a strong market sentiment and provides clear evidence for strategic decision-making.
-
-The analysis shows that premium propiedades has established a solid reputation in the Medellín real estate market, primarily due to their exceptional service and professionalism. Exploiting this positive feedback through targeted marketing efforts would be highly beneficial, while addressing potential issues will ensure continued client satisfaction and loyalty.
+### Bad Customer Service (0.3% [4/1496])
+- "si pudiera poner 0 lo haría tienen 0 asertiva comunicación con sus clientes 0 profesionalismo a la hora de hacer los inventarios no revisan de manera correcta y al final quieren cargar dineros de daños que ya estaban nunca hagan ningún negocios con ellos"
+- "la atención de esta empresa es terrible no responden las solicitudes de los clientes y manejan mal la información para confundir a sus clientes no lo recomiendo para nada son la mata de la incompetencia no están afiliados a la lonja de propiedad raíz"
+- "mi calificación no es por el servicio ya que hasta ahora han respondido a las peticiones sobre el inmueble sin embargo las personas que trabajan en la compañía son mezquinas tienen falencias de comunicación y atención con y para los clientes son exigentes con el cliente pero no sé exigen a ellas mismas para ser mejores empleadas es lamentable que aún existan personas así sin un poco de cordialidad sin un mínimo de empatía ni educacion por  las personas que se permiten confiar y aceptar el servicio de  una empresa sostenible y organizada  siente uno que les está pidiendo un favor y no un servicio por el cual se está pagando les deseo crecimiento y autoconocimiento"
+- "esta empresa no tiene empatía con sus clientes no justifican sus gastos y aun demostrando que no tienen la razón y que los cobros no son como ellos los plantean sus respuestas son ignorar o sencillamente ser groseros cosa que es poco profesional  muy mala atención realmente de la parte administrativa y al ver los demás comentarios creo que el error definitivamente  no está en sus clientes sino en sus maneras  ojalá mejoren porque la solución no es borrar los comentarios"
 
 ---
 
-
-# UX
-
-# 📊 MARKET INTELLIGENCE REPORT
-
-## 🎯 CORE PATTERN: GENERAL MARKET OVERVIEW
-The market sentiment is predominantly positive, with a significant portion of clients expressing satisfaction and recommending the services provided. Negative feedback, although minimal in frequency, highlights issues such as poor customer service and delayed communication.
-
-## 💡 KEY BEHAVIORAL INSIGHTS
-- **Insight Statement (90% Frequency/Density):** Clients are highly satisfied with the comprehensive support offered by Steven and Mauricio's team.
-  - *REAL QUOTE Evidence:* "steven and mauricio and their staff take care of everything from start to finish and are available to help you after the sale. buying property in a foreign country can be daunting but they have the knowledge and the staff to make things uncomplicated."
-- **Insight Statement (80% Frequency/Density):** Positive experiences with Laura Hernández and Maribel indicate personal attention and dedication.
-  - *REAL QUOTE Evidence:* "laura hernández from remax was amazing to work with buying a property internationally can be quite confusing and stressful but she made the process as easy as possible she really went out of her way and assisted with things that normal agents usually dont."
-- **Insight Statement (10% Frequency/Density):** Negative experiences highlight issues like poor customer service, delayed communication, and unresolved problems.
-  - *REAL QUOTE Evidence:* "never never wont recommend this company i been waiting for more the one month to publish my property and everyday is something new horrible service and communication."
-
-## 📈 STRATEGIC IMPLICATIONS & ACTION PLAN
-- **Mitigate Negative Feedback:** Addressing customer concerns swiftly, especially regarding delayed communication and unresolved issues, can significantly improve client satisfaction.
-  - *Action Plan:* Implement a robust feedback mechanism to monitor and resolve issues promptly. Train staff on effective communication skills and ensure they are equipped to handle cross-cultural communication challenges.
-- **Enhance Customer Service:** Leverage positive experiences like those of Laura Hernández and Maribel to create tailored service packages that cater to the needs of international buyers.
-  - *Action Plan:* Develop a customer service training program focusing on personalization, responsiveness, and cultural awareness. Highlight success stories in marketing materials to attract more clients.
-
-## 🚥 DATA CONFIDENCE: HIGH
-The high number of positive insights (6 quotes) and the single negative insight provide a robust data set for analysis. The repeated patterns in the feedback confirm that these are significant behaviors in the market, enhancing the reliability of our conclusions.
+### Bad Music (0.3% [4/1496])
+- "quite esa mrda de música noesta en nada eso cansa"
+- "pero que porqueria de musica de mrd pones"
+- "todo bello menos la canción"
+- "me en canta mucho"
 
 ---
 
+## 🟢 DESIRES & MOTIVATIONS (POSITIVE SIGNALS)
 
-# IDENTITY
-
-# 📊 MARKET INTELLIGENCE REPORT
-
-## 🎯 CORE PATTERN: DESIRE / MOTIVATION
-The market sentiment is overwhelmingly positive towards **Premium Properties**, with clients expressing strong satisfaction and a clear desire to work with them again. This is evidenced by their high level of engagement and the multiple times they highlight professional, responsive, and knowledgeable service.
-
-## 💡 KEY BEHAVIORAL INSIGHTS
-- Insight Statement: The desire for quality customer service is cited 7 out of 10 instances, indicating a strong preference among potential clients.
-- REAL QUOTE Evidence:
-    - "super professional responsive and knowledgeable about the market they really take the time to understand what you're looking for and make the entire process smooth and stress-free."
-    - "what am amazing service provided very friendly approachable responding quick and give good recommendations they helped me to buy an apartment in medellin i am very happy with the way things went so i do not understand why there are negative reactions for me only positive experiences."
-
-- Insight Statement: Premium Properties is highly recommended by 8 out of 10 instances, showcasing a strong desire among clients to recommend the service to others.
-- REAL QUOTE Evidence:
-    - "highly recommend them to anyone looking to rent buy or learn more about what medellín real estate has to offer."
-    - "katherine set up several viewings and was instrumental in the entire process if you're looking for a one-stop-shop for investing in real estate in medellin or making it your primary home this team has it all."
-
-## 📈 STRATEGIC IMPLICATIONS & ACTION PLAN
-- **Exploit the Opportunity:** Premium Properties should continue to emphasize their commitment to customer service and client satisfaction. Highlighting testimonials and case studies can reinforce these values, building trust and driving more referrals.
-- **Mitigate Risks:** Address any negative feedback proactively by offering clear solutions or compensation where appropriate. For instance, if clients report issues like delayed responses or unfulfilled promises, ensure that communication channels are streamlined and customer service training is robust.
-
-## 🚥 DATA CONFIDENCE: HIGH
-Justification: The high frequency of positive quotes (8 out of 10) and the strong desire for continued business and recommendations (7 out of 10) provide a robust foundation for strategic decisions. The consistency across multiple clients and services (buying, renting, investing) further supports the high confidence level in these insights.
+### Luxury Design (1.7% [25/1496])
+- "que hermosura"
+- "hermoso"
+- "hermosa propiedad"
+- "hay muchas más hermosas"
+- "hermosa"
 
 ---
 
-Based on the detailed analysis provided, here is a comprehensive strategic plan that addresses various aspects of user experience (UX) to improve overall satisfaction and credibility:
+### Good Service (1.2% [18/1496])
+- "buena atención"
+- "muy buena atención"
+- "muy buena atención y oportuna"
+- "muy buena la atención"
+- "buena atención y oportuna respuesta a tos las inquietude"
 
-### Strategic Plan
+---
 
-#### 1. Enhance Customer Service Quality
-**Objective**: Provide consistent, reliable, and proactive customer service.
-- **Actions**:
-  - Implement a robust training program for customer service representatives to ensure professionalism, empathy, and quick response times.
-  - Establish clear communication protocols with defined response times (e.g., within 24 hours for urgent queries).
-  - Introduce regular check-ins and follow-ups during the property buying or rental process.
+### Good Experience (0.3% [4/1496])
+- "gran experiencia y atención"
+- "la experiencia ha sido muy buena atención profesional y servicial"
+- "buena atención y experiencia en general"
+- "buena experiencia"
 
-#### 2. Improve Price Transparency and Value Perception
-**Objective**: Ensure accurate pricing and clear value perception to manage user expectations.
-- **Actions**:
-  - Conduct periodic audits of property listings to ensure accuracy in pricing, taxes, and HOA fees.
-  - Provide detailed breakdowns of costs during the initial consultation.
-  - Highlight unique selling points and practical features that justify higher prices through marketing materials and website content.
+---
 
-#### 3. Address Service Inconsistencies
-**Objective**: Resolve issues related to delayed or unresponsive customer service.
-- **Actions**:
-  - Create a dedicated support team for property-related inquiries to ensure consistent and timely responses.
-  - Implement a feedback system where users can provide direct input on their experiences, enabling quick resolution of issues.
+## 📊 OTHER THEMES
 
-#### 4. Leverage Positive User Experiences
-**Objective**: Promote positive testimonials and success stories.
-- **Actions**:
-  - Feature customer testimonials prominently on the website and social media platforms.
-  - Share case studies and successful property buying or rental journeys to build trust and credibility.
-  - Encourage satisfied customers to leave reviews on external platforms.
+### Excellent Service (7.3% [109/1496])
+- "as a foreign investor i was initially unsure about buying property in medellín and didnt know where to start after speaking with several companies i decided to work with premium propiedades and was connected with sebastian  sebastian guided me through the entire process of finding the right investment property and explaining the medellín market the purchase process was smooth and transparent and the team has done a great job managing the apartment since then  two years later the property has performed very well with consistent rental income and solid appreciation im very happy with the investment and grateful for sebastians guidance throughout the process  i would absolutely recommend premium propiedades to anyone looking to invest in medellín real estate"
+- "excellent service from an incredible team  im new to colombia and they are very knowledgeable in local real estate and helped me get settled well highly recommend it"
+- "as a first time overseas buyer in colombia my experience with this real estate company was spectacular   not only did the team help navigate me through the process from beginning to end but theyve also been a trusted partner in managing my property as a rental during times im out of the country   highly recommend"
+- "these guys know what they are doing and can totally recommend them super helpful when youd like to buy and or rent a place in medellin"
+- "bought an apartment with the help of premium propiedades im very satisfied in my new home and if you ever are looking to buy in medellin i highly recommend to use the help of this experts"
 
-#### 5. Regularly Review and Update Policies
-**Objective**: Ensure policies are clear, consistent, and user-friendly.
-- **Actions**:
-  - Conduct regular reviews of customer service, pricing, and property management policies.
-  - Implement changes based on user feedback and market trends to continuously improve the overall experience.
-  - Provide clear guidelines for both internal staff and external users.
+---
 
-#### 6. Enhance UX During Property Buying or Rental Process
-**Objective**: Ensure a smooth and positive interaction throughout the process.
-- **Actions**:
-  - Develop a step-by-step guide for property buyers or renters, including key milestones and expected outcomes.
-  - Provide regular updates via email or messaging apps to keep users informed about the status of their inquiries or transactions.
+### General Feedback (3.0% [45/1496])
+- "si usted como propietario valora ó atesora sus bienes jamás hagan alianza con esta inmobiliariano saben la desvalorización el abandono las irregularidades y malos manejos una captación de dineros que según ellos por cuidar el bolsillo del arrendatario pero ni allá llegasi alguien más tiene inconformidades lo invitó a no quedarse callado y denunciar la faltas a sus contratos los atropellos y si ellos logran salir librados porque el decir es que nunca pierden pues hacerlos publicos y que todos conozcan su falta de éticaatropellos e inoperancia deshonestos y como arrendador jamás por mucho que le guste la propiedad no haga contratos no sabe la pesadilla que le espera así sea muy correct con sus pagos"
+- "berefulful con el contrato no le permiten obtener nada arreglado en el apartamento si el propietario lo descuida el contrato también les permite aumentar el precio sin previo aviso asegurarle el nuevo precio del contrato de arrendamiento sin su consentimiento si intenta arreglar algo el apartamento viola el contrato y la agencia tiene derecho a rescindir el acuerdo y conservar el cdt el servicio de la agencia es bueno pero si tiene un arrendador malo el contrato protege al arrendador malo entonces si el propietario no quiere arreglar nada no puede arreglarlo estás atrapado con un apartamento realmente malo entonces el problema es el contrato de la agencia sea extremadamente cauteloso con el contrato de esta agencia"
+- "recomiendo mucho a la inmobiliaria bienes en línea somos clientes de ellos desde hace más de 10 años y el servicio es excelente resalto la respuesta oportuna ante cualquier necesidad o inquietud así como el servicio personalizado que poco se ve en otras empresas similares estoy muy agradecida por el apoyo que nos brindan siempre con mucho profesionalismo"
+- "soy propietario quiero compartir mi experiencia con city raíz tuve una situación muy difícil porque mi apartamento fue abandonado por los anteriores arrendatarios pero en todo momento me sentí respaldado por la inmobiliaria ellos asumieron la gestión me acompañaron en el proceso y además se encargaron de reparar los daños que quedaron en el inmueble dejándolo en perfectas condiciones para volver a arrendar  hoy ya tengo un nuevo contrato firmado y me siento tranquila y confiada porque sé que estoy en buenas manos agradezco la seriedad el profesionalismo y el compromiso con el que manejaron mi caso  recomiendo totalmente a city raíz especialmente a otros propietarios porque es una empresa que responde que respalda y que realmente cuida el patrimonio de sus clientes"
+- "excelente inmobiliaria estuve 5 años con ellos y no me arrepiento los pagos súper fácil la atención es excelente recomendadisima"
 
-### Implementation Timeline
-1. **Month 1-2**: Finalize training program and establish communication protocols.
-2. **Month 3-4**: Launch new pricing policies and marketing materials.
-3. **Month 5-6**: Implement feedback system and begin feature customer testimonials prominently.
-4. **Month 7-8**: Conduct reviews of internal policies and make necessary updates.
-5. **Ongoing**: Continuously monitor user experiences, gather feedback, and refine strategies as needed.
+---
 
-### Key Performance Indicators (KPIs)
-1. Customer Satisfaction Scores
-2. Response Time for Inquiries
-3. Number of Positive Testimonials and Reviews
-4. Conversion Rates from Inquiry to Purchase/Rental
-5. User Feedback on Website and Social Media
+### More Information (0.7% [10/1496])
+- "claridad en la información"
+- "me interesa me podrias mandarme mas informacion"
+- "excelente me merece muy buena información"
+- "buena información"
+- "me das información"
 
-By implementing these strategic initiatives, Bienes Constructores can significantly enhance user satisfaction, build trust, and foster positive word-of-mouth recommendations, ultimately driving growth and success in the market.
+---
+
+### Too Cold (0.7% [10/1496])
+- "muy bonita pero no es para mí para familia grande para que le de calor  qué ironía unos con mucho y otros sin tener nada muy bonita pero para mi gusto muy frío"
+- "mucho lujo pero demasiado fria y sombria me da como miedo mas bien falto solo  el mausoleo en marmol  del conde dracula en la terraza superior donde encajara perfecta su aparicion  con su negra capa en la palidas y frias noches de lluna llena es realmente hermosa y costosa pero fria sin calidez sin vida muy lugubre y escalofriante"
+- "la casa se ve contemporánea pero no se siente tan hermosa y acogedora como otras de menor valor"
+- "está muy bonita y muy elegante pero no es mi gusto no me gustan las casas tan extravagante demasiado grande mucho espacio como desperdiciado no tiene casi alcohol si le falta como el calor de hogar se ve que es una casa demasiado fría que no tiene muy elegante sí pero no no me parece le faltan como plantas como cosas en la en el comedor unas plantas en macetas bien lindas bien bonitas en la sala pero no se ve una casa muy sobria muy fría sin calor de hogar"
+- "muy hermosa la casa"
+
+---
+
+### Superior Quality (0.5% [8/1496])
+- "la mejor nada más que decir"
+- "he visto mejores"
+- "super recomendados"
+- "es la mejor"
+- "súper recomendados"
+
+---
+
+### Highly Recommend (0.5% [7/1496])
+- "maribel uribe was great our transaction went through very smoothly as she described everything from very beginning i highly recommend you to work with her shes very responsive you can always reach out to her it was really great to work with her"
+- "maribel is incredibly good at what she does she navigated me through the difficulties of buying property internationally with grace i couldnt be happier with the result of owning a property here in colombia if youre looking to buy a home here i highly recommend maribel and her team at coffee realty"
+- "maribel has been amazing throughout the process of purchasing our property she has been very organised and responsive from searching for potential properties all the way through to completion thank you very much we really appreciate you help with this"
+- "maribel uribe uribe is the very best realtor medellin has to offer i know i had to fire a bunch of them she is fast responsive cares and is very smart"
+- "marible was outstanding a bilingual realestate agent whom has a passion to help others she helped me through every step of the way she takes the frustration and intimidation out the equation when it comes to bridging the gap between americans investing in colombia shes not just there for a commission because she will still make sure even after that your business affairs are in order and believe me you will need that extra support thanks maribel"
+
+---
+
+### Skepticism About Construction Quality (0.4% [6/1496])
+- "me encanta esta constructora por su sólida trayectoria en el sector marcada por compromiso excelencia y visión su dedicación a cada proyecto y la calidad humana con la que atienden a sus clientes reflejan confianza solo agradecimiento en el proceso de compra de nuestro hogar"
+- "he comprado 2 apartamentos con la constructora bienes  bienes  uno en los cabos y otro recientemente en bantue el cual está en construcción lo que más me gusta es que siempre me hacen sentir tranquila y segura no solo por los años de exeriencia que tienen sino porque se nota lo profesionales que son en lo que hacen siempre he recibido acompañamiento en cada uno de los procesos que he estado los recomendaría siempre para invertir en vivienda"
+- "100 recomendada gracias a bienes y bienes cumplimos el sueño de tener vivienda propia es una constructora confiable y segura en la cual volveríamos a invertir con toda seguridad"
+- "compatriotas  tengan mucho cuidado antes de confiar sus sueños a la constructora bienes  bienes ya que se pueden convertir en una pesadilla  mientras están en el proceso de venta las asesoras se muestras como personas humanas y educadas una vez ya han logrado la venta y empieza el proceso de entrega ahí es cuando realmente se muestran como son entregan  trabajos incompletos  de cualquier manera edificaciones con humedades sin terminar con afectación de la seguridad expuestas a robos sufridos recientemente en la unidad residencial  materiales de mala calidad  zonas comunes prometidas que  a saber si un día entregarán escrituras que parece que estuvieran fabricando aún el papel   todo contrario a lo pactado y por lo cual se les pagó  y bien caro las asesoras  una vez han cogido el dinero de los clientes empiezan a bufar y tratarlo a uno como si apestara como dice la sabia frase  tras ladrón bufón  entonces  sin terminar las ventas de las edificaciones de manera correcta dicen a los clientes chao ahí se quedan tirados y empiezan a lucir otra vez su mejor máscara de actuación y dar inicio a la promoción de otro sinnúmero de proyectos"
+- "respetando las opiniones de muchos yo me encuentro bastante agradecida con la constructora bienes  bienes ya que desde todo punto de vista me brindaron las alternativas que necesité para hacer mi sueño de tener vivienda propia una realidad soy propietaria de ensenada apartamentos llevo 5 años viviendo allí y siempre tuve una excelente experiencia"
+
+---
+
+### Different Advisors (0.3% [5/1496])
+- "trate con diferentes asesores y no ayudan y cuando tenia cita para ver apartamentos me incumplieron"
+- "me ayudaron alquilar un apartamento en envigado nos fue muy bien el asesor siempre estuvo muy atento"
+- "guau me encantó este apartamento lo tiene todo"
+- "me interesa el apartamento sabes si el integrado me deja cerquita"
+- "el apartamento me supongo debe venir con el cura incluido para poder hacer uso confesor"
+
+---
+
+### High Fees Info Request (0.3% [5/1496])
+- "valor del predial y administración por favor no veo la info en la descripción"
+- "hola precio de la administración y predial anual por favor"
+- "por favor quiero saber el precio de este predio y en qué parte de medellín queda ese predio por favor gracias"
+- "precio    predial   administration    por favor"
+- "en qué parte de medellín más información por favor"
+
+---
+
+### Excellent Inmobiliaria (0.3% [5/1496])
+- "excelente inmobiliaria  super completos en todo"
+- "la mejor inmobiliaria"
+- "excelente inmobiliaria muy cumplida"
+- "es muy buena inmobiliaria"
+- "excelente inmobiliaria"
+
+---
+
+### Still Available (0.3% [4/1496])
+- "todavía está disponible"
+- "está disponible y cuanto es"
+- "aún está disponible"
+- "saludos esta disponible"
+
+---
+
+### Rapid Process Handling (0.3% [4/1496])
+- "realizaron muy rápido el proceso de arrendamiento la persona que me atendió fue muy amable y muy profesional gracias"
+- "excelente asesoría y acompañamiento tanto en el proceso de arrendamiento como venta"
+- "excelente atención y muy rápido los procesos de arrendamiento"
+- "durante todo el proceso de arrendamiento fueron muy cumplidos  y los requerimientos han sido atendidos rápidamente y  con mucha amabilidad"
+
+---
+
+### Excellent Experience (0.3% [4/1496])
+- "el viernes pasado me hospedé en uno de los apartamentos de sebastián y fue una gran experiencia todo impecable la comunicación fue excelente sebastián responde rápido y siempre estuvo muy atento a cualquier necesidad sin duda lo recomiendo"
+- "me hospedé en el apartamento carrizal y me pareció muy cómodo todo se veía tal como en las fotos el lugar es muy seguro y tranquilo también quiero destacar el trabajo de sebastián quien estuvo muy atento y pendiente durante toda mi estadía"
+- "me hospedé en un apartamento en carrizal y la experiencia fue excelente de principio a fin desde el primer momento me sentí muy bien atendida y acompañada durante toda la estadía quiero destacar especialmente a sebastian quien estuvo pendiente de absolutamente todo lo que necesité siempre con la mejor disposición y amabilidad gracias a él la estadía fue muy cómoda tranquila y sin preocupaciones me sentí cuidada escuchada y muy bien atendida en todo momento sin duda es un lugar que recomiendo totalmente"
+- "me hospedé en caobos y realmente nos encantó el apartamento es un lugar muy cómodo bien ubicado y tal cual como se describe sebastián nos atendió excelente siempre muy atento y dispuesto a ayudarnos en todo momento sin duda lo recomiendo mucho y volveríamos a hospedarnos aquí"
+
+---
+
+### For Rent Only (0.3% [4/1496])
+- "esta propiedad esta solo de renta o venta también me interesa"
+- "me interesaria comprarla aceptan ofertas o solo es para rentar"
+- "esta en venta esta propiedad"
+- "hola estoy interesado renta la propiedad"
+
+---
+
+### Excellent Customer Service (0.3% [4/1496])
+- "la mejor asesoria y una excelente atención me ayudaron demasiado en mi proceso de venta de mi propiedad y además fue super rápido muchas gracias los mejores"
+- "muy buen acompañamiento durante todo el proceso asesores que responden rápido y son claros con todos los tramites excelente agencia"
+- "la atención fue excelente el proceso fue completamente claro y las asesoras muy dispuestas a solucionar las dudas que puedan surgir"
+- "excelente asesoría el proceso muy rápido y guiado en especial la asesoraría están muy pendientes ante las dudas lo ayudan a uno mucho recomiendo"
+
+---
+
+### Excellent Agent Service (0.3% [4/1496])
+- "laura hernández from remax was amazing to work with buying a property internationally can be quite confusing and stressful but she made the process as easy as possible she really went out of her way and assisted with things that normal agents usually dont"
+- "laura was incredible she listened to our needs and concerns then she prioritized the market before presenting properties we had another special need as we were using the purchase as part of a visa application that the property title be squeaky clean laura worked carefully with expatgroup to clear each property so that it fit all the legal needs she then previewed each property before taking us to see them in a way that was comfortable and not rushed we were not at all surprised that the result of this method found us the perfect property in the perfect location and at the very bottom of our budget it also created a situation where we had a very quick close without minimal issues when there was an issue for example the sellers presented a contract change that we were not comfortable with laura discussed the change and its implications with us and our lawyer ultimately we rejected the change and with lauras expertise the transaction went smoothly the sellers even invited us over for coffee after closing if you need real estate in medellin i believe laura hernandez will do the very best job"
+- "i was very pleased with the outstanding service i received from laura hernandez a realestate agent with remax she did a great job not only showing me homes for sale but explaining different areas to me so that we could eventually focus on homes in certain sectors of the city that most closely fit my lifestyle laura stayed on top of everything during my home search and was attentive to any questions i had along the way she ensured that the home sales negotiation was logical and realistic and that all paperwork was in perfect order no only did she just show me homes but really got to know me and my likes and dislikes about certain places which made the whole process very efficient and ultimately sucessful in finding me the perfect place the whole experience was very positive and an  enjoyable one i highly recommend laura hernandez to any expat seeking to buy property in the medellín colombia and surrounding area laura also speaks perfect english and knows the city very well as she is a life lifelong resident here i am extremely happy about my home purchase an i know you will too"
+- "my wife and i closed on a laureles property just a few months ago and worked with laura hernandez thru out the process  laura was so patient all along to take us thru a couple of neighborhoods as well as numerous showings both inperson as well as by video  it all worked out   and we certainly will continue to rely on lauras experience in future medellin real estate purchases thank you   so far so good"
+
+---
+
+### High Budget (0.3% [4/1496])
+- "no pude encontrar el inmueble que busco de presupuesto"
+- "no había el inmueble que buscaba"
+- "muy buena atención me encontraron el inmueble que tanto estaba buscando en el oriente"
+- "que precio tiene el inmueble gracias"
+
+---
+
+## 📈 SUMMARY
+
+Top 3 Dominant Themes:
+1. Excellent Service (7.3%)
+2. General Feedback (3.0%)
+3. High Prices (2.4%)
+
+Total Clusters Identified: 27
