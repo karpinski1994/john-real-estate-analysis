@@ -36,7 +36,12 @@ def run_global_analysis():
 
     print("\n🔗 6. MERGING SIMILAR CLUSTERS...")
     from pipeline.cluster_merger import merge_similar_clusters
-    final_clusters = merge_similar_clusters(labeled_clusters)
-    print(f"✅ Clusters merged: {len(labeled_clusters)} -> {len(final_clusters)}")
+    merged_clusters = merge_similar_clusters(labeled_clusters)
+    print(f"✅ Clusters merged: {len(labeled_clusters)} -> {len(merged_clusters)}")
+
+    print("\n🧠 7. THEMATIC NORMALIZATION (LEVEL 2 INTELLIGENCE)...")
+    from pipeline.theme_normalizer import group_normalized
+    final_clusters = group_normalized(merged_clusters)
+    print(f"✅ Strategic themes consolidated: {len(merged_clusters)} -> {len(final_clusters)}")
 
     return final_clusters, total_comments
