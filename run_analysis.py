@@ -76,6 +76,31 @@ def main():
         print("📊 GOOGLE MAPS MARKET INSIGHTS")
         print("="*20 + "\n")
         print(google_analysis)
+        
+        # --- SAVE FINAL COMBINED DEEP REPORT ---
+        full_report = f"""# 🔥 FINAL VoC DEEP MARKET REPORT
+
+This report combines deep psychological analysis from YouTube and Google Maps.
+
+## 🎥 YOUTUBE DEEP ANALYSIS
+{yt_analysis}
+
+---
+
+## 🗺 GOOGLE MAPS DEEP ANALYSIS
+{google_analysis}
+
+---
+*Report generated via AI Insight Engine*
+"""
+
+        FINAL_REPORT_PATH = "final_voc_report.md"
+        with open(FINAL_REPORT_PATH, "w", encoding="utf-8") as f:
+            f.write(full_report)
+
+        print("\n" + "="*40)
+        print(f"✅ FINAL CONSULTING REPORT saved → {FINAL_REPORT_PATH}")
+        print("="*40 + "\n")
     else:
         print(f"Skipping Google: {GOOGLE_FILE} not found.")
 
