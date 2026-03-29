@@ -45,65 +45,64 @@ def group_similar(results):
 
 
 def ask_market(question):
-    """Elite Query Engine: Intent detection, insight density counting, and RAG synthesis."""
-    print(f"🕵️  Elite Market Analysis for inquiry: '{question}'...")
+    """Elite Query Engine: Data-driven synthesis with strict grounding and intent recognition."""
+    print(f"🕵️  Analysing Inquiry: '{question}'...")
     
-    # 1. Intent Detection
+    # 1. Intent & Hybrid Search
     intent = detect_intent(question)
-    
-    # 2. Hybrid Search
     results = search_similar(question, k=50)
     
-    # 3. Frequency & Density Guards
     if not results:
         return "INSUFFICIENT DATA: No relevant market evidence found."
     
+    # 2. Density & Pattern Weighting
     density_rank = "HIGH" if len(results) >= 20 else "MEDIUM"
     if len(results) < 10:
-        density_rank = "LOW (Caution: Sparse data)"
+        density_rank = "LOW"
 
-    # 4. Pattern Counting & Grouping
     pattern_freq = count_patterns(results)
     context = group_similar(results)
 
-    # 5. Elite Prompting
+    # 3. Targeted Senior Analyst Prompt
     prompt = f"""
-You are a Lead Strategic Consultant and Behavioral Psychologist.
+You are a Senior Strategic Market Analyst. 
 
-Your task is to analyze the provided market data. 
-You are performing a: **{intent}** analysis.
+Your task is to analyze the provided market data for the core intent: **{intent}**.
+
+STRICT RULES:
+1. USE ONLY PROVIDED DATA: If something isn't in the comments, it doesn't exist.
+2. NO HALLUCINATED %: Do NOT invent percentages (e.g., "40% said...").
+3. RELATIVE FREQUENCY: Use terms like "High Signal", "Moderately Frequent", or "Isolated Mention" based on data density.
+4. BE SPECIFIC: Avoid generic statements like "customers want good service." Be concrete (e.g., "Users express frustration over WhatsApp response delays").
+5. EVERY INSIGHT MUST HAVE A QUOTE: Link every behavioral claim to a supporting quote from the context.
+6. FOCUS ON BEHAVIORS: Analyze what users ACTUALLY DO (actions, complaints, specific requests) rather than general opinions.
+
+User question: 
+"{question}"
 
 ---
-INSIGHT DENSITY (PATTERN FREQUENCY):
+CONTEXT (Pattern Frequency & Quotes):
 {pattern_freq}
----
-RAW DATA (CONTEXT):
 {context}
 ---
 
-STRICT ANALYTICAL RULES:
-1. FOCUS: Pay special attention to the {intent} aspect of the data.
-2. WEIGHTING: Repeated patterns (Insight Density) are more important than outliers.
-3. GROUNDING: Every claim MUST be backed by a direct quote below it.
-4. CONFIDENCE: Ensure your confidence level matches the source density (Rank: {density_rank}).
-5. HONESTY: If the data is contradictory or thin, explicitly state the limitations.
+OUTPUT FORMAT (No extra headers):
 
-OUTPUT FORMAT:
+### 🎯 CORE PATTERN
+- 1-2 sentences on the dominant behavioral theme discovered.
 
-# 📊 MARKET INTELLIGENCE REPORT
+### 💡 KEY BEHAVIORAL INSIGHTS
+- Specific Insight (Relative Frequency: High/Med/Low)
+- REAL QUOTE Example
 
-## 🎯 CORE PATTERN: {intent}
-- Summarize the dominant market sentiment in 2 sentences.
+### 🔍 EVIDENCE
+- Provide 3-5 additional supportive quotes.
 
-## 💡 KEY BEHAVIORAL INSIGHTS
-- Insight Statement (Highlight the % frequency/density derived from counts)
-- REAL QUOTE Evidence
+### 📈 STRATEGIC IMPLICATIONS
+- Concrete business action or marketing adjustment based on this specific data.
 
-## 📈 STRATEGIC IMPLICATIONS & ACTION PLAN
-- Exactly what the brand should do to exploit this opportunity or mitigate this risk.
-
-## 🚥 DATA CONFIDENCE: {density_rank}
-- Justify this based on the number of data points and repeats found.
+### 🚥 CONFIDENCE: {density_rank}
+- Brief justification of why this rank was chosen.
 """
 
     return call_llm(prompt)
