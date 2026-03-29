@@ -17,99 +17,108 @@ def classify_cluster(name):
         
     return "other"
 
-def generate_structured_report(clusters, noise_data, total_comments):
-    """
-    Generate a formatted market analysis report showing 100% data coverage.
-    """
+def generate_source_section(source_name, title, clusters, noise_data, total_comments):
+    """Generates a markdown section for a specific source."""
+    if total_comments == 0:
+        return f"# {title}\n\nNo data found for this source.\n\n"
+
     # 🔥 CATEGORIZE INTO MAIN VS LONG TAIL
-    # Threshold: Themes with < 1% are long tail (unless they are explicitly high-value)
     main_themes = [c for c in clusters if (c["count"] / total_comments) >= 0.01]
     long_tail = [c for c in clusters if (c["count"] / total_comments) < 0.01]
 
-    report = "# 📊 MARKET ANALYSIS REPORT (100% COVERAGE)\n\n"
-    report += f"**Total Comments Analyzed**: {total_comments}\n\n"
-    
+    section = f"# {title}\n\n"
+    section += f"**Total Comments Analyzed**: {total_comments}\n\n"
+
     pains = []
     desires = []
-    objections = []
     others = []
     
     for c in main_themes:
         category = classify_cluster(c.get("name", ""))
-        
         if category == "pain":
             pains.append(c)
         elif category == "desire":
             desires.append(c)
-        elif category == "objection":
-            objections.append(c)
         else:
             others.append(c)
 
-    # 🔴 PAINS
+    # 🔴 PAINS / NEGATIVE
     if pains:
-        report += "## 🔴 PAINS & FRUSTRATIONS (NEGATIVE SIGNALS)\n\n"
+        section += "## 🔴 CRITICAL PAINS & NEGATIVES\n\n"
         for c in pains:
-            report += format_cluster(c, total_comments)
+            section += format_cluster(c, total_comments)
 
-    # 🟢 DESIRES
+    # 🟢 DESIRES / POSITIVE
     if desires:
-        report += "## 🟢 DESIRES & MOTIVATIONS (POSITIVE SIGNALS)\n\n"
+        section += "## 🟢 CORE DESIRES & POSITIVE FEEDBACK\n\n"
         for c in desires:
-            report += format_cluster(c, total_comments)
-            
-    # 🚧 OBJECTIONS
-    if objections:
-        report += "## 🚧 OBJECTIONS (BUYING BARRIERS)\n\n"
-        for c in objections:
-            report += format_cluster(c, total_comments)
+            section += format_cluster(c, total_comments)
 
-    # 📊 SECONDARY THEMES
+    # 📊 SECONDARY
     if others:
-        report += "## 📊 SECONDARY THEMES\n\n"
+        section += "## 📊 SECONDARY PATTERNS\n\n"
         for c in others:
-            report += format_cluster(c, total_comments)
+            section += format_cluster(c, total_comments)
 
-    # 🧶 LONG TAIL
+    # 🟡 LONG TAIL
     if long_tail:
-        report += "## 🟡 LONG TAIL THEMES (Niche Signals < 1%)\n\n"
+        section += "## 🟡 LONG TAIL THEMES (Niche Signals < 1%)\n\n"
         total_lt = sum(c["count"] for c in long_tail)
-        report += f"These are minor, low-frequency topics together accounting for ({round(total_lt/total_comments*100, 1)}% of data).\n\n"
+        section += f"Minor topics together accounting for ({round(total_lt/total_comments*100, 1)}% of data).\n\n"
         for c in long_tail:
-            report += f"- **{c['name']}**: {c['count']} mentions\n"
-        report += "\n---\n\n"
+            section += f"- **{c['name']}**: {c['count']} mentions\n"
+        section += "\n---\n\n"
 
     # ⚪ NOISE
-    report += "## ⚪ UNCLASSIFIED (NOISE)\n\n"
-    report += f"Total Noise Points: {noise_data['count']} ({noise_data['percentage']}%)\n"
-    report += "These are short, non-semantic, or random comments that do not form a distinct pattern.\n\n"
-    report += "**Examples**:\n"
-    for ex in noise_data['examples']:
-        report += f"- \"{ex.strip()}\"\n"
-    report += "\n---\n\n"
-
-    # 📉 DATA COVERAGE VALIDATION
-    clustered_total = sum(c["count"] for c in clusters)
-    main_pct = round(sum(c["count"] for c in main_themes) / total_comments * 100, 1)
-    lt_pct = round(sum(c["count"] for c in long_tail) / total_comments * 100, 1)
-    noise_pct = noise_data['percentage']
+    section += "## ⚪ UNCLASSIFIED (NOISE)\n\n"
+    section += f"Total Noise Points: {noise_data['count']} ({noise_data['percentage']}%)\n"
+    section += "Examples:\n"
+    for ex in noise_data['examples'][:5]:
+        section += f"- \"{ex.strip()}\"\n"
+    section += "\n---\n\n"
     
-    report += "## 📉 DATA COVERAGE AUDIT\n\n"
-    report += "| Category | Mentions | Percentage |\n"
-    report += "|----------|----------|------------|\n"
-    report += f"| Main Themes | {sum(c['count'] for c in main_themes)} | {main_pct}% |\n"
-    report += f"| Long Tail | {sum(c['count'] for c in long_tail)} | {lt_pct}% |\n"
-    report += f"| Noise | {noise_data['count']} | {noise_pct}% |\n"
-    report += f"| **TOTAL** | **{total_comments}** | **100%** |\n\n"
-    
-    # Debug print for terminal
-    print(f"\nVALIDATION:")
-    print(f"Total: {total_comments}")
-    print(f"Clustered: {clustered_total}")
-    print(f"Noise: {noise_data['count']}")
-    print(f"Coverage check: {clustered_total + noise_data['count']} / {total_comments}")
+    return section
 
+def generate_multi_source_report(source_results):
+    """
+    Generates a consolidated market report with split perspectives.
+    source_results = {
+        'youtube': {'clusters': ..., 'noise_data': ..., 'total_comments': ...},
+        'google': {'clusters': ..., 'noise_data': ..., 'total_comments': ...}
+    }
+    """
+    report = "# 📊 INTEGRATED MARKET ANALYSIS\n\n"
+    report += "---\n\n"
+
+    if 'youtube' in source_results:
+        res = source_results['youtube']
+        report += generate_source_section("youtube", "🎥 YOUTUBE INSIGHTS (Perception & Sentiment)", 
+                                         res['clusters'], res['noise_data'], res['total_comments'])
+        report += "---\n\n"
+
+    if 'google' in source_results:
+        res = source_results['google']
+        report += generate_source_section("google", "📍 GOOGLE REVIEWS INSIGHTS (Customer Experience)", 
+                                         res['clusters'], res['noise_data'], res['total_comments'])
+        report += "---\n\n"
+
+    # 📉 CONSOLIDATED COVERAGE
+    report += "## 📉 FINAL DATA COVERAGE AUDIT\n\n"
+    report += "| Source | Clustered % | Noise % | Total |\n"
+    report += "|--------|-------------|---------|-------|\n"
+    
+    for src, res in source_results.items():
+        if res['total_comments'] > 0:
+            clustered_pct = round(sum(c['count'] for c in res['clusters']) / res['total_comments'] * 100, 1)
+            noise_pct = res['noise_data']['percentage']
+            report += f"| {src.capitalize()} | {clustered_pct}% | {noise_pct}% | {res['total_comments']} |\n"
+    
+    report += "\n"
     return report
+
+def generate_structured_report(clusters, noise_data, total_comments):
+    """Legacy single-source fallback."""
+    return generate_source_section("global", "MARKET ANALYSIS REPORT", clusters, noise_data, total_comments)
 
 def format_cluster(c, total_comments):
     percentage = round((c["count"] / total_comments) * 100, 1)
