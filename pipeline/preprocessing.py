@@ -22,7 +22,7 @@ def clean_text(text: str) -> str:
         return ""
 
     # 4. Filter by length
-    if len(text) < 5:
+    if len(text) < 2:
         return ""
 
     return text

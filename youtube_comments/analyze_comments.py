@@ -46,11 +46,12 @@ MAX_REVIEWS_PER_BATCH = 250
 # PROCESSING
 # =====================
 
-def extract_youtube_texts(videos):
-    """Extract and clean comments from YouTube data structure."""
+def extract_youtube_texts(data):
+    """Extract and clean all comments from YouTube data structure."""
     texts = []
-    for v in videos:
-        for c in v.get("comments", []):
+    for video in data:
+        comments = video.get("comments", [])
+        for c in comments:
             text = (c.get("textDisplay") or c.get("textOriginal") or "").strip()
             # USE CLEANER
             clean = clean_text(text)
@@ -60,17 +61,12 @@ def extract_youtube_texts(videos):
 
 
 def run_pipeline_on_youtube(videos):
-    """Orchestrate the AI pipeline for YouTube comments."""
+    """Orchestrate the AI pipeline for YouTube comments - Full dataset."""
     print("Running pipeline on YouTube comments...")
 
-    # 1. Preprocessing
+    # 1. Preprocessing (No slicing!)
     texts = extract_youtube_texts(videos)
-    # Limiting to manage context size if needed
-    if len(texts) > MAX_REVIEWS_PER_BATCH:
-        print(f"  Truncating {len(texts)} comments to {MAX_REVIEWS_PER_BATCH}...")
-        texts = texts[:MAX_REVIEWS_PER_BATCH]
-
-    print(f"Total comments to analyze: {len(texts)}")
+    print(f"Total YouTube comments found: {len(texts)}")
 
     # 2. AI Pipeline
     embeddings = embed_texts(texts)

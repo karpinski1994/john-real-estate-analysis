@@ -40,9 +40,9 @@ def main():
             yt_data = json.load(f)
 
         yt_texts = extract_youtube_texts(yt_data)
-        print(f"Loaded {len(yt_texts)} YouTube comments. Analyzing top 150...")
+        print(f"✅ Total YouTube comments found: {len(yt_texts)}")
         
-        yt_analysis = run_pipeline(yt_texts[:150])
+        yt_analysis = run_pipeline(yt_texts) # No slice!
 
         print("\n\n" + "="*20)
         print("📊 YOUTUBE MARKET INSIGHTS")
@@ -62,15 +62,19 @@ def main():
         with open(GOOGLE_FILE, encoding="utf-8") as f:
             google_data = json.load(f)
 
-        # Basic extraction for minimal runner
-        texts = []
+        # Robust extraction for Google
+        from pipeline.preprocessing import clean_text
+        google_texts = []
         for r in google_data:
-            text = (r.get("text") or "").strip()
-            if text:
-                texts.append(text.lower())
+            # TRY text or textTranslated fallback
+            text = (r.get("text") or r.get("textTranslated") or "").strip()
+            # Clean it
+            clean = clean_text(text)
+            if clean:
+                google_texts.append(clean)
         
-        print(f"Loaded {len(texts)} Google reviews. Analyzing top 150...")
-        google_analysis = run_pipeline(texts[:150])
+        print(f"✅ Total Google reviews found: {len(google_texts)}")
+        google_analysis = run_pipeline(google_texts) # No slice!
 
         print("\n\n" + "="*20)
         print("📊 GOOGLE MAPS MARKET INSIGHTS")
