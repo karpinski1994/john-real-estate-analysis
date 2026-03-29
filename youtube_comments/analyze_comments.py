@@ -18,184 +18,74 @@ import httpx
 BASE_DIR   = Path("/Users/karpinski94/projects/google maps scraper/youtube_comments")
 INPUT_FILE = BASE_DIR / "apartamentos-en-venta-medellin.json"
 OUTPUT_MD  = BASE_DIR / "youtube_analysis_report.md"
-OLLAMA_URL = "http://127.0.0.1:11434"
+OUTPUT_JSON = BASE_DIR / "youtube_analysis_result.json"
 
-# Preferred model order (best first). Script picks the first one that's installed.
-PREFERRED_MODELS = [
-    "llama3.3:70b",
-    "llama3.1:70b",
-    "qwen2.5:32b",
-    "mistral-large",
-    "llama3.1:8b",
-    "llama3:8b",
-    "mistral:7b",
-    "qwen2.5:7b",
-    "gemma2:9b",
-]
+# Add parent directory to path to allow importing pipeline
+import sys
+sys.path.append(str(BASE_DIR.parent))
 
-MAX_REVIEWS_PER_BATCH = 50  # YouTube comments are shorter, can fit more
+from pipeline.embedder import embed_texts
+from pipeline.clustering import cluster_embeddings
+from pipeline.analyzer import analyze_clusters
+from pipeline.llm import build_prompt, call_llm
+from pipeline.preprocessing import clean_text
+from pipeline.labeler import label_clusters
+from pipeline.aggregator import merge_clusters, group_by_theme
+from pipeline.report import generate_report
+
+# IMPORT GOOGLE RUNNER
+import sys
+GOOGLE_DIR = Path("/Users/karpinski94/projects/google maps scraper/google_maps_reviews")
+sys.path.append(str(GOOGLE_DIR))
+import analyze_reviews_v2 as google_pipeline
+
+MAX_REVIEWS_PER_BATCH = 250
 
 
 # =====================
-# HELPERS
+# PROCESSING
 # =====================
 
-def get_best_model() -> str:
-    resp = httpx.get(f"{OLLAMA_URL}/api/tags", timeout=10)
-    resp.raise_for_status()
-    installed = {m["name"] for m in resp.json().get("models", [])}
-    print(f"Installed models: {installed or '(none)'}")
-    for m in PREFERRED_MODELS:
-        if m in installed:
-            print(f"  → Using: {m}")
-            return m
-    # fallback: just use whatever is installed
-    if installed:
-        chosen = sorted(installed)[-1]
-        print(f"  → Using fallback: {chosen}")
-        return chosen
-    sys.exit("❌  No Ollama models installed. Run: docker exec ollama ollama pull llama3.1:8b")
-
-
-def reviews_to_text(videos: list[dict]) -> str:
-    """Flatten nested YouTube comments to a compact text block for the prompt."""
-    lines = []
+def extract_youtube_texts(videos):
+    """Extract and clean comments from YouTube data structure."""
+    texts = []
     for v in videos:
-        video_title = v.get("video", {}).get("title", "Unknown Video")
         for c in v.get("comments", []):
             text = (c.get("textDisplay") or c.get("textOriginal") or "").strip()
-            if text:
-                lines.append(f"[Video: {video_title}] {text}")
-    return "\n".join(lines)
+            # USE CLEANER
+            clean = clean_text(text)
+            if clean:
+                texts.append(clean)
+    return texts
 
 
-def call_ollama(model: str, prompt: str) -> str:
-    """Stream tokens from Ollama so we print progress live and never hit a read timeout."""
-    payload = {
-        "model": model,
-        "prompt": prompt,
-        "stream": True,
-        "options": {
-            "temperature": 0.2,
-            "num_ctx": 16384,
-        },
-    }
-    print("  Streaming from Ollama (tokens will appear below)…", flush=True)
-    full_response = []
-    with httpx.stream(
-        "POST",
-        f"{OLLAMA_URL}/api/generate",
-        json=payload,
-        timeout=httpx.Timeout(connect=15.0, read=None, write=None, pool=None)
-    ) as resp:
-        resp.raise_for_status()
-        for line in resp.iter_lines():
-            if not line:
-                continue
-            chunk = json.loads(line)
-            token = chunk.get("response", "")
-            print(token, end="", flush=True)
-            full_response.append(token)
-            if chunk.get("done"):
-                break
-    print()  # newline after streaming
-    return "".join(full_response)
+def run_pipeline_on_youtube(videos):
+    """Orchestrate the AI pipeline for YouTube comments."""
+    print("Running pipeline on YouTube comments...")
 
+    # 1. Preprocessing
+    texts = extract_youtube_texts(videos)
+    # Limiting to manage context size if needed
+    if len(texts) > MAX_REVIEWS_PER_BATCH:
+        print(f"  Truncating {len(texts)} comments to {MAX_REVIEWS_PER_BATCH}...")
+        texts = texts[:MAX_REVIEWS_PER_BATCH]
 
-def extract_json(raw: str) -> dict:
-    """Pull the first valid JSON object out of the model's response and clean common LLM errors."""
-    # strip possible markdown fences
-    raw = re.sub(r"```(?:json)?", "", raw).strip()
+    print(f"Total comments to analyze: {len(texts)}")
+
+    # 2. AI Pipeline
+    embeddings = embed_texts(texts)
+    labels = cluster_embeddings(embeddings)
+    clusters = analyze_clusters(texts, labels)
     
-    # Fix common LLM JSON errors:
-    # 1. remove unquoted percentages like 2.49% -> 2.49
-    raw = re.sub(r"(\"percentage\":\s*)(\d+\.?\d*)%", r"\1\2", raw)
-    
-    # find outermost {}
-    start = raw.find("{")
-    if start == -1:
-        raise ValueError("No JSON object found in response")
-    depth, end = 0, -1
-    for i, ch in enumerate(raw[start:], start):
-        if ch == "{":
-            depth += 1
-        elif ch == "}":
-            depth -= 1
-            if depth == 0:
-                end = i
-                break
-    return json.loads(raw[start : end + 1])
+    # 3. Labeling
+    print("Labeling clusters...")
+    clusters = label_clusters(clusters)
 
+    # 4. LLM Final Result
+    prompt = build_prompt(clusters)
+    analysis = call_llm(prompt)
 
-# =====================
-# PROMPT BUILDER
-# =====================
-
-SYSTEM_PROMPT = """\
-You are a world-class Market Research Analyst, Behavioral Psychologist, and Direct Response Copywriter.
-Your task is to thoroughly analyze the provided YouTube comments dataset.
-Your goal is to produce a comprehensive, deep-dive Voice of Customer (VoC) and behavioral report.
-
-RULES:
-1. Provide at least 7-10 distinct insights per category where data allows.
-2. Quantify EVERY insight: exact count AND percentage of total comments.
-3. PERCENTAGE MUST BE A NUMBER ONLY. DO NOT ADD THE % SYMBOL (e.g., 2.49, not 2.49%).
-4. Sort every array in DESCENDING order by percentage.
-5. Go deep on psychology: awareness levels, identity, status, fears, desires, JTBD.
-6. Quotes MUST be exact, word-for-word snippets from the comments below.
-7. Implications must be sharp, concrete, actionable business/copywriting takeaways.
-8. Output ONLY a valid JSON object. No markdown fences, no intro, no outro.
-
-OUTPUT JSON STRUCTURE:
-{
-  "distribution": {
-    "total": number,
-    "sentiment": { "positive": number, "neutral": number, "negative": number }
-  },
-  "psychology": {
-    "pains": [{ "text": "string", "count": number, "percentage": number, "quote": "string", "implication": "string" }],
-    "failedSolutions": [{ "text": "string", "count": number, "percentage": number, "quote": "string", "implication": "string" }],
-    "emotionalCost": [{ "text": "string", "count": number, "percentage": number, "quote": "string", "implication": "string" }],
-    "desires": [{ "text": "string", "count": number, "percentage": number, "quote": "string", "implication": "string" }],
-    "statusSignals": [{ "text": "string", "count": number, "percentage": number, "quote": "string", "implication": "string" }]
-  },
-  "barriers": {
-    "objections": [{ "text": "string", "count": number, "percentage": number, "quote": "string", "implication": "string" }],
-    "trustIssues": [{ "text": "string", "count": number, "percentage": number, "quote": "string", "implication": "string" }],
-    "priceSkepticism": [{ "text": "string", "count": number, "percentage": number, "quote": "string", "implication": "string" }],
-    "anxietyPatterns": [{ "text": "string", "count": number, "percentage": number, "quote": "string", "implication": "string" }]
-  },
-  "product": {
-    "featureRequests": [{ "text": "string", "count": number, "percentage": number, "quote": "string", "implication": "string" }],
-    "uxComplaints": [{ "text": "string", "count": number, "percentage": number, "quote": "string", "implication": "string" }],
-    "unintendedUses": [{ "text": "string", "count": number, "percentage": number, "quote": "string", "implication": "string" }]
-  },
-  "competitors": {
-    "directComparisons": [{ "text": "string", "count": number, "percentage": number, "quote": "string", "implication": "string" }],
-    "switchingTriggers": [{ "text": "string", "count": number, "percentage": number, "quote": "string", "implication": "string" }]
-  },
-  "voice": {
-    "repeatedPhrases": ["string"],
-    "metaphors": ["string"],
-    "identityStatements": ["string"]
-  },
-  "actionable": {
-    "opportunities": ["string"],
-    "messagingAngles": ["string"],
-    "objectionsToAddress": ["string"]
-  }
-}
-"""
-
-
-def build_prompt(reviews_text: str, total: int) -> str:
-    return f"""{SYSTEM_PROMPT}
-
----COMMENTS (total dataset: {total} comments, sample shown below)---
-{reviews_text}
----END OF COMMENTS---
-
-Now output the JSON analysis:"""
+    return clusters, analysis
 
 
 # =====================
@@ -309,62 +199,58 @@ def render_md(data: dict) -> str:
 # =====================
 
 def main():
-    print("=== VoC Analyzer (YouTube) ===\n")
-
-    # 1. Load data
-    print(f"Loading {INPUT_FILE} …")
-    with open(INPUT_FILE, encoding="utf-8") as f:
-        videos: list[dict] = json.load(f)
+    print("=== Combined VoC Insight Engine (YouTube + Google) ===\n")
     
-    # Count total comments for accurate stats
-    total_comments = sum(len(v.get("comments", [])) for v in videos)
-    print(f"  {len(videos)} videos with total {total_comments} comments loaded")
+    # --- 1. YOUTUBE PIPELINE ---
+    if not INPUT_FILE.exists():
+        print(f"File not found: {INPUT_FILE}")
+        return
 
-    # 2. Pick model
-    model = get_best_model()
+    with open(INPUT_FILE, encoding="utf-8") as f:
+        videos = json.load(f)
 
-    # 3. Build text (limit videos if too many, currently 100 max comments)
-    # We take comments until we reach roughly MAX_REVIEWS_PER_BATCH
-    sample_videos = []
-    current_count = 0
-    for v in videos:
-        count = len(v.get("comments", []))
-        if count == 0: continue
-        sample_videos.append(v)
-        current_count += count
-        if current_count >= MAX_REVIEWS_PER_BATCH:
-            break
+    # Note: run_pipeline_on_youtube handles its own printing
+    yt_clusters, yt_analysis = run_pipeline_on_youtube(videos)
 
-    reviews_text = reviews_to_text(sample_videos)
-    print(f"  Using {current_count} comments for analysis prompt")
 
-    # 4. Call LLM
-    prompt = build_prompt(reviews_text, total_comments)
-    raw_response = call_ollama(model, prompt)
+    # --- 2. GOOGLE PIPELINE ---
+    print("\n\n=== RUNNING GOOGLE MAPS SEGMENTED ANALYSIS ===")
+    G_INPUT = GOOGLE_DIR / "all_reviews.json"
+    if G_INPUT.exists():
+        with open(G_INPUT, encoding="utf-8") as f:
+            g_data = json.load(f)
+        
+        # Triggering the Google's full analysis logic
+        g_results = google_pipeline.run_pipeline_on_google(g_data)
+        
+        g_pos = g_results.get("positive_clusters", [])
+        g_neg = g_results.get("negative_clusters", [])
+    else:
+        print(f"Google data not found at {G_INPUT}")
+        g_pos, g_neg = [], []
 
-    # 5. Parse JSON
-    print("  Parsing response …")
-    try:
-        analysis = extract_json(raw_response)
-    except Exception as e:
-        # Save raw for debugging
-        raw_path = BASE_DIR / "analysis_raw_response_yt.txt"
-        raw_path.write_text(raw_response, encoding="utf-8")
-        print(f"  ⚠️  JSON parse failed: {e}")
-        print(f"  Raw response saved to {raw_path}")
-        sys.exit(1)
 
-    # 6. Save raw JSON too
-    json_path = BASE_DIR / "youtube_analysis_result.json"
-    json_path.write_text(json.dumps(analysis, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"  Raw JSON saved → {json_path}")
+    # --- 3. MERGE & AGGREGATE ---
+    print("\n--- Aggregating Market Themes ---")
+    merged = merge_clusters(yt_clusters, g_pos, g_neg)
+    grouped = group_by_theme(merged)
 
-    # 7. Render Markdown
-    md = render_md(analysis)
-    OUTPUT_MD.write_text(md, encoding="utf-8")
-    print(f"\n✅  Report saved → {OUTPUT_MD}")
+
+    # --- 4. GENERATE REPORT ---    
+    final_report = generate_report(grouped)
+    
+    REPORT_PATH = BASE_DIR / "combined_voc_report.md"
+    with open(REPORT_PATH, "w", encoding="utf-8") as f:
+        f.write(final_report)
+
+    # Final Output
+    print("\n" + "="*40)
+    print("👑 UNIFIED MARKET INSIGHTS")
+    print("="*40)
+    print(final_report)
+    print(f"\n✅ Final Market Report saved to: {REPORT_PATH}")
+    print("="*40)
 
 
 if __name__ == "__main__":
     main()
-

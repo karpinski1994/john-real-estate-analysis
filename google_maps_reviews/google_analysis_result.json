@@ -1,0 +1,185 @@
+{
+  "negative": {
+    "clusters": [
+      {
+        "label": 0,
+        "count": 94,
+        "percentage": 94.0,
+        "examples": [
+          "nunca se comunicaron el servicio fue pesimo",
+          "mi experiencia con inmobiliaria las vegas en términos generales fue negativa, especialmente en el manejo de reclamaciones por daños en el inmueble. en varias ocasiones las respuestas fueron demasiado demoradas y los procesos poco claros.\n\nel caso más incómodo ocurrió cuando un fuerte ventarrón cerró de golpe la puerta de una habitación, provocando que la chapa se trabara a tal punto que ni la llave ni un cerrajero lograron abrirla. finalmente fue necesario cortar la chapa con pulidora para poder acceder. al solicitar a la inmobiliaria y al propietario el reconocimiento del costo del arreglo, la respuesta de la agencia fue que la responsabilidad era mía por no haber prevenido que el viento pudiera cerrar la puerta en cualquier momento, algo que sinceramente me pareció insólito.\n\nademás, los procesos a través del chatbot resultan muy poco productivos. en la mayoría de los casos aparece un mensaje indicando que todos los asesores se encuentran ocupados y pueden pasar incluso días sin que alguno se desocupe, lo que evidencia una clara falta de gestión y seguimiento en el uso de esta plataforma de atención.\n\nen general, la gestión de la inmobiliaria fue bastante deficiente en este y otros procesos durante el contrato. no obstante, al momento de la entrega del inmueble la experiencia fue mucho mejor gracias a la asesora yuliana suaza, quien se apersonó del proceso y nos ayudó resolviendo varias inquietudes y situaciones de forma muy profesional.",
+          "pésimo servicio no cumplen con lo pactado",
+          "muy mal servicio, muy mala atención al cliente.",
+          "pésima inmobiliaria y muy desordenados.\nevítese molestias"
+        ]
+      },
+      {
+        "label": 1,
+        "count": 2,
+        "percentage": 2.0,
+        "examples": [
+          "nunca me contestaron 🤷🏻‍♂️",
+          "contestan y se escucha ruido, no hablan"
+        ]
+      }
+    ],
+    "analysis": "**Main Pains:**\n1. Poor Communication\n2. Inadequate Handling of Claims\n3. Unresponsive Support via Chatbot\n4. General Management Issues\n\n**Desires:**\n1. Prompt and Effective Communication\n2. Clear and Timely Resolution of Issues\n3. Reliable Customer Service\n4. Professional and Efficient Inmobiliaria Operations\n\n**Complaints:**\n1. Lack of Response from the Inmobiliaria\n2. Insufficient Compensation for Property Damage\n3. Useless Chatbot Interactions Due to Occupancy\n4. Poor Management Practices During Contract Period\n\n**Patterns:**\n1. Consistent Negative Experiences Across Multiple Interactions\n2. Repeated Issues with Communication and Claim Handling\n3. Dependence on Human Agents for Effective Resolution\n4. Overall Dissatisfaction Leading to Warnings to Other Potential Users"
+  },
+  "positive": {
+    "clusters": [
+      {
+        "label": 11,
+        "count": 16,
+        "percentage": 16.0,
+        "examples": [
+          "me inspira confianza esta constructora por su trayectoria y su manera de trabajar con excelencia.",
+          "excelente constructora, la mejor de la cuidad, muy comprometidos con el cliente y muy buenos acabados en sus proyectos",
+          "desde el primer contacto, la experiencia con bienes & bienes constructores ha sido excelente. su equipo demuestra un alto nivel de profesionalismo, entregando proyectos dentro del plazo y respetando el presupuesto acordado. la calidad de los materiales utilizados es destacable y se nota en los acabados finales.",
+          "me encanta esta constructora por su sólida trayectoria en el sector, marcada por compromiso, excelencia y visión.\nsu dedicación a cada proyecto y la calidad humana con la que atienden a sus clientes reflejan confianza. solo agradecimiento en el proceso de compra de nuestro hogar.",
+          "excelente experiencia. bienes & bienes constructores cumple lo que promete, ofrecen calidad y un acompañamiento constante. muy recomendados."
+        ]
+      },
+      {
+        "label": 6,
+        "count": 7,
+        "percentage": 7.0,
+        "examples": [
+          "buen dia,fue muy agradable la atencion prestada por la señorita yuliana,muy atenta y clara con sus explicaciones,excelente servicio.",
+          "quiero destacar la excelente experiencia que tuve con la agencia de arrendamiento las vegas, especialmente con la asesora yuliana suaza. su atención fue impecable, siempre dispuesta a ayudar, resolver dudas y acompañar todo el proceso de manera clara y oportuna. además de su profesionalismo, valoro mucho su trato humano, cercano y respetuoso, lo que hizo que todo fuera mucho más fácil y confiable. sin duda, los recomiendo.\nluis carlos álvarez",
+          "excelente inmobiliaria muy formales la  asesora  yuliana   me resolvió mis dudas muy formal",
+          "excelente atención y profesionalismo.\nyuliana suaza gracias por tener todas las respuestas y excelente atención a la solicitud requerida, personas como usted ayudan al crecimiento de cualquier empresa.\ntenga un feliz día",
+          "me parece una excelente atención, y quiero felicitar a la asesora yuliana por el acompañamiento que me dió en mi reubicación, excelente asesora.\nmuchas gracias."
+        ]
+      },
+      {
+        "label": 3,
+        "count": 6,
+        "percentage": 6.0,
+        "examples": [
+          "excelente atención",
+          "muy bien trato excelente atención gracias",
+          "excelente atención",
+          "excelente atención, amabilidad, calidez",
+          "excelente atencion"
+        ]
+      },
+      {
+        "label": 4,
+        "count": 5,
+        "percentage": 5.0,
+        "examples": [
+          "excelente servicio",
+          "excelente servicio, buenos profesionales",
+          "excelente servicio de parte de alexander muy amable, súper recomendado",
+          "excelente servicio, brindan una excelente  asesoría  y todos son muy amables",
+          "excelente servicio"
+        ]
+      },
+      {
+        "label": 2,
+        "count": 4,
+        "percentage": 4.0,
+        "examples": [
+          "muy buena atencion",
+          "buena atención",
+          "muy buena atención y oportuna",
+          "buena atención"
+        ]
+      },
+      {
+        "label": 12,
+        "count": 4,
+        "percentage": 4.0,
+        "examples": [
+          "100% recomendada. gracias a bienes y bienes cumplimos el sueño de tener vivienda propia. es una constructora confiable y segura en la cual volveríamos a invertir con toda seguridad!",
+          "respetando las opiniones de muchos, yo me encuentro bastante agradecida con la constructora bienes & bienes, ya que desde todo punto de vista me brindaron las alternativas que necesité para hacer mi sueño de tener vivienda propia, una realidad. soy propietaria de ensenada apartamentos, llevo 5 años viviendo allí y siempre tuve una excelente experiencia.",
+          "adquirir vivienda siempre da algo de miedo, pero con bienes & bienes me sentí acompañado desde el primer momento. todo el proceso fue claro, sin sorpresas, y con un trato súper humano. se nota que no solo venden propiedades, también construyen confianza. hoy puedo decir que estoy cumpliendo un sueño, y ellos fueron parte clave. gracias.",
+          "he comprado 2 apartamentos con la constructora bienes & bienes,  uno en los cabos y otro recientemente en bantue el cual está en construcción. lo que más me gusta es que siempre me hacen sentir tranquila y segura, no solo por los años de exeriencia que tienen sino porque se nota lo profesionales que son en lo que hacen. siempre he recibido acompañamiento en cada uno de los procesos que he estado. los recomendaría siempre para invertir en vivienda"
+        ]
+      },
+      {
+        "label": 5,
+        "count": 3,
+        "percentage": 3.0,
+        "examples": [
+          "muchas gracias alexander, excelente lugar , excelente atención y una gran experiencia",
+          "muy buena atención, gracias alexander encontré lo que mi esposa tanto avía deseado muchas gracias",
+          "me gustó mucho la atención prestada, alexander muy profesional en lo hace, encontré lo que buscaba muy buenas propiedades a un precio justo... recomendadisimo."
+        ]
+      },
+      {
+        "label": 0,
+        "count": 2,
+        "percentage": 2.0,
+        "examples": [
+          "han sido muy diligentes conmigo y siempre prestos para mis solicitudes...",
+          "muy amable, diligente y resolutiva"
+        ]
+      },
+      {
+        "label": 10,
+        "count": 2,
+        "percentage": 2.0,
+        "examples": [
+          "la experiencia con la constructora ha sido impecable. la calidad de sus acabados, la garantía de su estructura, el acompañamiento de los asesores es de admirar. cuando pienso en invertir, sin duda, pienso en ustedes!!!",
+          "la mejor constructora para invertir!!"
+        ]
+      },
+      {
+        "label": 14,
+        "count": 2,
+        "percentage": 2.0,
+        "examples": [
+          "es una empresa que entrega soluciones para el sector corporativo y de vivienda innovadoras y con una calidad unica. como cliente me siento muy satisfecho con la asesoria recibida y la calidad de mi solucion de vivienda.",
+          "buenas tardes. me parece una empresa comprometida con un buen desarrollo de vivienda, generando proyectos atractivos, hechos con muy buena calidad y con completa honestidad. también consciente de atender las necesidades a sus clientes."
+        ]
+      },
+      {
+        "label": 13,
+        "count": 2,
+        "percentage": 2.0,
+        "examples": [
+          "gracias por hacer realidad el sueño de tener vivienda propia. una constructora correcta, las asesoras son muy profesionales. los he recomendado a mis familiares en el exterior y todos han quedado felices, de verdad gracias por que son un símbolo de confianza y calidad.",
+          "una compañía que me hizo realidad el sueño de tener mi vivienda, somos muy felices de haberlo logrado con ustedes, cada proceso y el acompañamiento de un equipo tan profesional, solo me resta decirles infinitas gracias."
+        ]
+      },
+      {
+        "label": 1,
+        "count": 2,
+        "percentage": 2.0,
+        "examples": [
+          "excelente empresa, cumplidos y respetuosos.",
+          "excelente empresa!!!"
+        ]
+      },
+      {
+        "label": 7,
+        "count": 2,
+        "percentage": 2.0,
+        "examples": [
+          "muy buena constructora, he conocido varios de sus proyectos y se nota su calidad. además como habitante de medellín sé que ha sido parte de la evolución de la ciudad con edificios muy importantes.",
+          "compramos con esta constructora en medellín y en itagüí, nos gustó mucho la asesoría de los vendedores, siempre fueron claros con la información y al momento de recibir los apartamentos, coincidía con lo que nos prometieron, nos gustó mucho los acabados y el acompañamiento en la entrega y nos guiaron en el crédito hipotecario."
+        ]
+      },
+      {
+        "label": 9,
+        "count": 2,
+        "percentage": 2.0,
+        "examples": [
+          "excelente compañia con gran calidad humana y profesional que se refleja en los proyectos y en sus labores día a día, innovando y aportando al desarrollo de la región y del país.",
+          "una compañía de gran trayectoria y que construye referentes de ciudad, imprimiendo calidad e innovación en cada proyecto que desarrolla."
+        ]
+      },
+      {
+        "label": 8,
+        "count": 2,
+        "percentage": 2.0,
+        "examples": [
+          "una compañía para toda la vida!!\nla mejor constructora, responsable, organizada y completamente recomendada para sus futuras inversiones 👍🏻",
+          "una constructura muy seria, organizada y con altos estandares.\nrecomendada!!"
+        ]
+      }
+    ],
+    "analysis": "### Main Pains\n- None explicitly mentioned in the clusters.\n\n### Desires\n1. **Reliable and Professional Service**: Consistently highlighted by comments on professionalism, reliability, and attention to detail.\n2. **Quality of Work**: Multiple mentions of high-quality materials and excellent craftsmanship.\n3. **Trusted Partner for Investment**: Several comments express trust and a desire to invest in the company's projects due to their reputation.\n\n### Complaints\n- None explicitly mentioned in the clusters.\n\n### Patterns\n1. **Consistent Praise**: Repeated positive feedback on multiple aspects, including professional service, high-quality work, and reliability.\n2. **Customer Service Excellence**: Frequent mentions of excellent customer service, particularly with staff such as Yuliana Suaza and Alexander.\n3. **Trust and Reliability**: Numerous comments highlight the company's trustworthiness and consistent delivery of promises.\n4. **Quality in Construction**: Multiple references to the quality of materials used and the overall build.\n5. **Customer Satisfaction**: Many comments indicate satisfaction with purchasing or investing through the company, often mentioning specific positive experiences like Yuliana Suaza’s service.\n6. **Repeat Business and Recommendations**: Several clusters mention that customers are satisfied enough to recommend the services to others.\n\nThese patterns suggest a high level of customer satisfaction across various aspects of business operations, from construction quality to customer service."
+  }
+}
