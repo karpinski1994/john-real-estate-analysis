@@ -27,8 +27,8 @@ def run_global_analysis():
     print(f"✅ Clusters found: {num_clusters}")
 
     print("\n📈 4. AGGREGATING STATISTICS...")
-    clusters = analyze_clusters(texts, labels)
-    print(f"✅ Data aggregated into {len(clusters)} valid clusters")
+    clusters, noise_data = analyze_clusters(texts, labels)
+    print(f"✅ Data aggregated into {len(clusters)} clusters + noise")
 
     print("\n🏷️ 5. LABELING CLUSTERS (LLM)...")
     labeled_clusters = label_clusters(clusters)
@@ -44,4 +44,4 @@ def run_global_analysis():
     final_clusters = group_normalized(merged_clusters)
     print(f"✅ Strategic themes consolidated: {len(merged_clusters)} -> {len(final_clusters)}")
 
-    return final_clusters, total_comments
+    return final_clusters, noise_data, total_comments

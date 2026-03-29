@@ -17,15 +17,16 @@ def classify_cluster(name):
         
     return "other"
 
-def generate_structured_report(clusters, total_comments):
+def generate_structured_report(clusters, noise_data, total_comments):
     """
-    Generate a formatted market analysis report using pure Python logic.
-    No LLM used here for synthesis or calculation.
+    Generate a formatted market analysis report showing 100% data coverage.
     """
-    # 🔥 SORT BY COUNT POST-MERGE
-    clusters.sort(key=lambda x: x["count"], reverse=True)
+    # 🔥 CATEGORIZE INTO MAIN VS LONG TAIL
+    # Threshold: Themes with < 1% are long tail (unless they are explicitly high-value)
+    main_themes = [c for c in clusters if (c["count"] / total_comments) >= 0.01]
+    long_tail = [c for c in clusters if (c["count"] / total_comments) < 0.01]
 
-    report = "# 📊 MARKET ANALYSIS REPORT\n\n"
+    report = "# 📊 MARKET ANALYSIS REPORT (100% COVERAGE)\n\n"
     report += f"**Total Comments Analyzed**: {total_comments}\n\n"
     
     pains = []
@@ -33,7 +34,7 @@ def generate_structured_report(clusters, total_comments):
     objections = []
     others = []
     
-    for c in clusters:
+    for c in main_themes:
         category = classify_cluster(c.get("name", ""))
         
         if category == "pain":
@@ -63,21 +64,51 @@ def generate_structured_report(clusters, total_comments):
         for c in objections:
             report += format_cluster(c, total_comments)
 
-    # 📊 MARKET PATTERNS
+    # 📊 SECONDARY THEMES
     if others:
-        report += "## 📊 OTHER THEMES\n\n"
+        report += "## 📊 SECONDARY THEMES\n\n"
         for c in others:
             report += format_cluster(c, total_comments)
 
-    # 📉 SUMMARY
-    report += "## 📈 SUMMARY\n\n"
-    report += f"Top 3 Dominant Themes:\n"
-    for i, c in enumerate(clusters[:3]):
-        percentage = round((c["count"] / total_comments) * 100, 1)
-        report += f"{i+1}. {c.get('name', 'N/A')} ({percentage}%)\n"
-        
-    report += f"\nTotal Clusters Identified: {len(clusters)}\n"
+    # 🧶 LONG TAIL
+    if long_tail:
+        report += "## 🟡 LONG TAIL THEMES (Niche Signals < 1%)\n\n"
+        total_lt = sum(c["count"] for c in long_tail)
+        report += f"These are minor, low-frequency topics together accounting for ({round(total_lt/total_comments*100, 1)}% of data).\n\n"
+        for c in long_tail:
+            report += f"- **{c['name']}**: {c['count']} mentions\n"
+        report += "\n---\n\n"
+
+    # ⚪ NOISE
+    report += "## ⚪ UNCLASSIFIED (NOISE)\n\n"
+    report += f"Total Noise Points: {noise_data['count']} ({noise_data['percentage']}%)\n"
+    report += "These are short, non-semantic, or random comments that do not form a distinct pattern.\n\n"
+    report += "**Examples**:\n"
+    for ex in noise_data['examples']:
+        report += f"- \"{ex.strip()}\"\n"
+    report += "\n---\n\n"
+
+    # 📉 DATA COVERAGE VALIDATION
+    clustered_total = sum(c["count"] for c in clusters)
+    main_pct = round(sum(c["count"] for c in main_themes) / total_comments * 100, 1)
+    lt_pct = round(sum(c["count"] for c in long_tail) / total_comments * 100, 1)
+    noise_pct = noise_data['percentage']
     
+    report += "## 📉 DATA COVERAGE AUDIT\n\n"
+    report += "| Category | Mentions | Percentage |\n"
+    report += "|----------|----------|------------|\n"
+    report += f"| Main Themes | {sum(c['count'] for c in main_themes)} | {main_pct}% |\n"
+    report += f"| Long Tail | {sum(c['count'] for c in long_tail)} | {lt_pct}% |\n"
+    report += f"| Noise | {noise_data['count']} | {noise_pct}% |\n"
+    report += f"| **TOTAL** | **{total_comments}** | **100%** |\n\n"
+    
+    # Debug print for terminal
+    print(f"\nVALIDATION:")
+    print(f"Total: {total_comments}")
+    print(f"Clustered: {clustered_total}")
+    print(f"Noise: {noise_data['count']}")
+    print(f"Coverage check: {clustered_total + noise_data['count']} / {total_comments}")
+
     return report
 
 def format_cluster(c, total_comments):

@@ -11,16 +11,16 @@ def main():
 
     # Step 1: Run Global Data Analysis (Loading, Embedding, Clustering, Naming)
     # This replaces the previous RAG/query_engine approach
-    clusters, total_comments = run_global_analysis()
+    # 4. Global Analysis (Loading + Embedding + Clustering + Normalizing)
+    clusters, noise_data, total_comments = run_global_analysis()
     
     if not clusters:
         print("❌ Report generation aborted: No clusters identified.")
         return
 
-    # Step 2: Generate the report using pure Python logic (no LLM here)
-    # This prevents hallucinated percentages and strategies.
-    print("\n📝 6. GENERATING FINAL REPORT (PURE PYTHON)...")
-    final_report = generate_structured_report(clusters, total_comments)
+    # 5. Generate Final Report (100% Coverage)
+    print("\n📝 6. GENERATING FINAL REPORT (STRUCTURED DATA)...")
+    final_report = generate_structured_report(clusters, noise_data, total_comments)
 
     # Step 3: Save the final report
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:

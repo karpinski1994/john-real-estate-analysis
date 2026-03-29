@@ -2,13 +2,18 @@ from collections import defaultdict
 import random
 
 def analyze_clusters(comments, labels):
-    """Aggregate comments into clusters based on labels and extract real quotes."""
+    """
+    Aggregate all comments into clusters or noise buckets.
+    Ensures 100% data coverage.
+    """
     clusters = defaultdict(list)
+    noise_comments = []
 
     for comment, label in zip(comments, labels):
         if label == -1:
-            continue  # noise
-        clusters[int(label)].append(comment)
+            noise_comments.append(comment)
+        else:
+            clusters[int(label)].append(comment)
 
     total = len(comments)
     results = []
@@ -16,9 +21,8 @@ def analyze_clusters(comments, labels):
     for label, texts in clusters.items():
         count = len(texts)
         percentage = round((count / total) * 100, 2)
-
-        # 🔥 Random samples (REAL DATA)
-        # Using 5 quotes as requested
+        
+        # Keep ALL clusters for now (small ones will be handled later)
         quotes = random.sample(texts, min(5, len(texts)))
 
         results.append({
@@ -28,7 +32,14 @@ def analyze_clusters(comments, labels):
             "quotes": quotes
         })
 
-    # Sort by market impact
-    results.sort(key=lambda x: x["percentage"], reverse=True)
+    # Sort results by count
+    results.sort(key=lambda x: x["count"], reverse=True)
 
-    return results
+    # Calculate noise stats separately
+    noise_data = {
+        "count": len(noise_comments),
+        "percentage": round((len(noise_comments) / total) * 100, 2),
+        "examples": random.sample(noise_comments, min(10, len(noise_comments))) if noise_comments else []
+    }
+
+    return results, noise_data
